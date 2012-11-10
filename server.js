@@ -1,10 +1,9 @@
-var connect, fs;
-
+var connect, fs, io;
 fs = require('fs');
 
 connect = require('connect');
 
-connect().use(function (req, res, next) {
+var server = connect().use(function (req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
@@ -22,4 +21,10 @@ connect().use(function (req, res, next) {
     return res.end(JSON.stringify(files));
 }).listen(8000);
 
-console.log('superwolf');
+io = require('socket.io').listen(server);
+io.sockets.on('connection', function (socket) {
+  socket.emit('ping', { hello: 'world' });
+  socket.on('pong', function (data) {
+    console.log(data);
+  });
+});
