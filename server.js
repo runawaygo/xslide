@@ -1,11 +1,17 @@
 var DATA_FILE = "mm/data.json";
+var DATA_DEMO_FILE = "mm/data.json.backup";
 
 var mindmapProvider = {
   _instance: null,
 
   get: function() {
-    if( !this._instance) this._instance = JSON.parse(fs.readFileSync(DATA_FILE));
+    if( !this._instance) this._instance = this.getFile(DATA_FILE);
     return this._instance;
+  },
+
+  getFile: function(filename) {
+    filename = filename || DATA_FILE;
+    return JSON.parse(fs.readFileSync(filename));
   },
 
   set: function(mindmap) {
@@ -21,7 +27,7 @@ var mindmapProvider = {
         }
     }
 
-//    fs.writeFileSync(DATA_FILE, JSON.stringify(mindmap));
+    fs.writeFileSync(DATA_FILE, JSON.stringify(mindmap));
 
     this._instance = mindmap;
   },
@@ -59,7 +65,7 @@ var server = connect()
  */
 .use('/c', function(req,res){
   res.statusCode = 307;
-  res.setHeader('Location', '/client/app.html?key=' + req.url.substring(1));
+  res.setHeader('Location', '/client/app.html');
   res.end();
 })
 
@@ -77,6 +83,13 @@ var server = connect()
  */
 .use('/slide', function (req, res) {
   res.end(JSON.stringify(mindmapProvider.get()));
+})
+
+/**
+ * Loaded demo map
+ */
+.use('/demo', function(req,res){
+  res.end(JSON.stringify(mindmapProvider.getFile(DATA_DEMO_FILE)));
 })
 
 /**

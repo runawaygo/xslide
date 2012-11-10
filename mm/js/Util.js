@@ -24,7 +24,6 @@ mindmaps.Util.trackEvent = function(category, action, label) {
  * @static
  * @returns {String} a unique id
  */
-var nextId = 0;
 mindmaps.Util.createUUID = function() {
   // http://www.ietf.org/rfc/rfc4122.txt
   return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
@@ -39,7 +38,7 @@ mindmaps.Util.createUUID = function() {
  * @returns {String} id
  */
 mindmaps.Util.getId = function() {
-  return nextId++ + '';
+  return mindmaps.Util.createUUID();
 };
 
 /**

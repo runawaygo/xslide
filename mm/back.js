@@ -65,8 +65,8 @@ mindmaps.ApplicationController = function() {
   /**
    * Handles the open document command.
    */
-  function doOpenDocument(isDemo) {
-    $.post(isDemo?'/demo':'/slide', function(data){
+  function doOpenDocument() {
+    $.post('/slide', function(data){
       var doc = mindmaps.Document.fromJSON(data);
       mindmapModel.setDocument(doc);
     });
@@ -161,7 +161,7 @@ mindmaps.ApplicationController = function() {
     });
     
     $('#demo-btn').click(function(){
-      doOpenDocument(true);
+
     });
 
     function SlideChnage(e){

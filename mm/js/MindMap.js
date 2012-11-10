@@ -16,7 +16,7 @@ mindmaps.MindMap = function(root) {
     this.root = root;
   } else {
     this.root = new mindmaps.Node();
-    this.root.text.font.size = 20;
+    this.root.text.font.size = 26;
     this.root.text.font.weight = "bold";
     this.root.text.caption = "Central Idea";
   }

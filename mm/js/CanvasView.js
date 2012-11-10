@@ -394,7 +394,6 @@ mindmaps.DefaultCanvasView = function() {
       "class" : "node-caption node-text-behaviour",
       text : node.text.caption
     }).css({
-      "color" : font.color,
       "font-size" : this.zoomFactor * 100 + "%",
       "font-weight" : font.weight,
       "font-style" : font.style,

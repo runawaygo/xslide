@@ -12,7 +12,7 @@ mindmaps.Document = function() {
     modified : null
   };
 
-  this.dimensions = new mindmaps.Point(4000, 2000);
+  this.dimensions = new mindmaps.Point(3000, 2000);
   this.autosave = false;
 };
 
