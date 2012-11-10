@@ -75,11 +75,12 @@ $(function() {
     $.get('/slide/'+key,function(data){
        var socket = io.connect('http://'+ window.location.host);
       socket.on('vote', function (parentNode) { // TIP: you can avoid listening on `connect` and listen on events directly too!
-        var elementId  = '#chart-'+parentNode.id;
+        var elementId  = 'chart-'+parentNode.id;
         var resultY = [];
         var resultX = [];
-        for(var i = 0;i<parentNode.children;i++){
-          var node = parentNode[i];
+        console.log(parentNode);
+        for(var i = 0;i<parentNode.children.length;i++){
+          var node = parentNode.children[i];
           resultY.push(node.text.caption);
           resultX.push(node.voteCount);
         }
@@ -105,18 +106,22 @@ $(function() {
         var resultY = [];
         var resultX = [];
         var dataChartArray = dataChart.split('--');
-        for(var i = 0;i<dataChartArray.length;i+=3){
+        for(var i = 0;i<dataChartArray.length-1;i+=3){
           resultY.push(dataChartArray[i+1]);
           resultX.push(dataChartArray[i+2]);
         }
-
+        console.log(resultY);
+        console.log(resultX);
         chart('column', item.id, resultY, resultX);
       })
 
       $(document).bind('deck.change', function(event, from, to) {
-         var $current = $('.deck-current,deck-child-current');
-         if($current.length == 0) return;
-         socket.emit('page', {current:$current[0].id});
+          setTimeout(function(){
+            var $current = $('section.deck-current, section.deck-child-current');
+            if($current.length == 0) return;
+            socket.emit('page', {current:$current[0].id});
+          },100);
+         
       });
 
     })

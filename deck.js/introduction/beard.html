@@ -41,6 +41,7 @@
 			<section class="slide"  id="${id}">
 				<h2>${text.caption.substring(0,text.caption.length - ":select".length)}</h2>
 				<p>${'http://' + window.location.host + '/c/' + id}</p>
+
 				<div style="float:left;width:50%;display:inline-block;">
 					<canvas class="qr" data->No Canvas Support?</canvas>
 				</div>
@@ -48,7 +49,7 @@
 				{{each children}}
 						${id+'--' + text.caption + '--' + voteCount + '--'}
 				{{/each}}
-				" style="float:left;width:50%;display:inline-block;">
+				" style="float:left;display:inline-block;width: 400px; height: 400px; margin: 0 auto">
 				</div>
 				
 			</section>

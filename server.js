@@ -10,8 +10,8 @@ var mindmapProvider = {
   _cache: function() {
     this._cachedVotes = {};
     this._cachedVoteOptions = {};
-    for( var i = 0; i < mindmap.mindmap.root.children.length; ++i) {
-      var secondLevelNode = mindmap.mindmap.root.children[ i];
+    for( var i = 0; i < this._instance.mindmap.root.children.length; ++i) {
+      var secondLevelNode = this._instance.mindmap.root.children[ i];
       if( ":select" === secondLevelNode.text.caption.substring( secondLevelNode.text.caption.length - ":select".length)) {
    	    this._cachedVotes[ secondLevelNode.id] = secondLevelNode;
         for( var j = 0; j < secondLevelNode.children.length; ++j) {
@@ -44,7 +44,7 @@ var mindmapProvider = {
   },
 
   getVote: function(id) {
-    return this._cachedVotes[ id];
+    return id?this._cachedVotes[ id]:null;
   },
 
   getOption: function(id) {
@@ -122,18 +122,21 @@ var server = connect()
   if(req.method == 'GET') { // Obtaining options. From the audience
     var votePage = mindmapProvider.getVote(mindmapProvider.getCurrentPage());
     if( votePage) { // Current page is a vote page, setup the vote for the audience
-      res.end(JSON.stringify(secondLevelNode));
+      res.end(JSON.stringify(votePage));
     } else { // Current page is not a vote page, turn off the vote page
-      res.end("{}");
+      res.end(JSON.stringify({notVote:true}));
     }
     return;
   } else if(req.method == 'POST') { // Submitting the vote. From the audience
     var ids = req.body.ids;
     if(typeof ids == 'string') ids = [ids]; // The user checked only one option
-    var parentNode = mindmapProvider.getOption(mindmapProvider.getOption(ids[0]).parentId);
+    var parentNode = mindmapProvider.getVote(mindmapProvider.getOption(ids[0]).parentId);
     for( var i = 0; i < ids.length; ++i) {
-      ++mindmapProvider.getOption(id).voteCount;
+      console.log(ids[i])
+      console.log(mindmapProvider.getOption(ids[i]).text)
+      ++mindmapProvider.getOption(ids[i]).voteCount;
   	}
+    console.log(parentNode);
     io.sockets.emit('vote', parentNode);
     res.end('你已经提交成功！');
   }
@@ -145,7 +148,7 @@ io = require('socket.io').listen(server);
 
 io.sockets.on('connection', function(socket) {
   socket.on('page', function(data) {
-    console.log("The main screen has turned to page: " + data);
+    console.log("The main screen has turned to page: " + data.current);
     var pageId = data.current;
     mindmapProvider.setCurrentPage( pageId);
   });

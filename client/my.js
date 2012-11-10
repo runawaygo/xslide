@@ -289,16 +289,22 @@ function getParameterByName(name)
     return decodeURIComponent(results[1].replace(/\+/g, " "));
 }
 
+var currentPageId;
 $(function(){
-	console.log('superwolf');
 	setInterval(function(){
-		$.get('/client/vote',{id:getParameterByName('key')},function(data){
-		console.log(data);
-		var node = JSON.parse(data);
-		$('#title').html(node.text.caption);
-	  	$('#item-check').tmpl(node).prependTo('#container');
-	  	$('#vote-page').trigger('create');
-	})
+		$.get('/client/vote',function(data){
+			var node = JSON.parse(data);
+			if(node.notVote) return;
+
+
+			if(currentPageId  == node.id ) return;
+
+			currentPageId = node.id;
+			$('#title').html(node.text.caption);
+			$('#container').html('');
+		  	$('#item-check').tmpl(node).prependTo('#container');
+		  	$('#vote-page').trigger('create');
+		})
 	},3000)
 })
 
