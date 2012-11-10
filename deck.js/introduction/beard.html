@@ -37,11 +37,18 @@
 	</script>
 
 	<script type="text/x-jquery-tmpl" id="tmplSlide">
+		{{if text.caption.substring(text.caption.length - ':select'.length) === ':select'}}
+			<section class="slide">
+				<h2>${text.caption}</h2>
+				// <p>${'http://' + window.location.host + '/vote'}</p>
+				<canvas id="${id}" class="qr" data->No Canvas Support?</canvas>
+			</section>
+		{{/if}}
 		<section class="slide">
 			<h2>${text.caption}</h2>
 			<ol>
 				{{each children}}
-					<li><h3>${$value.text.caption}</h3></li>
+					<li><h3 id="${id}">${$value.text.caption}</h3></li>
 				{{/each}}
 			</ol>
 		</section>
@@ -92,5 +99,7 @@
 
 <script src="/socket.io/socket.io.js"></script>
 <script src="beard.js" type="text/javascript"></script>
+<script src="../../qr/qrenc3.js" type="text/javascript"></script>
+
 </script>
 </html>

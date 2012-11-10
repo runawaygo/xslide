@@ -701,7 +701,7 @@ function genframe(instring)
     return qrframe;
 }
 
-function show( canvas, input, canvasWidth, canvasHeight) {
+function showQR( canvas, input, canvasWidth, canvasHeight) {
     var canvasWidth = 512;
     var canvasHeight = 512;
 

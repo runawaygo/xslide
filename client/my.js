@@ -290,7 +290,20 @@ function getParameterByName(name)
 }
 
 $(function(){
-	$.get('/client/vote',getParameterByName(key),function(data){
-		
+	$.get('/client/vote',getParameterByName('key'),function(data){
+		var node = JSON.parse(data);
+		$('#title').html(node.text.caption);
+	  	$('#item-check').tmpl(node).prependTo('#container');
+	  	$('#vote-page').trigger('create');
 	})
 })
+
+
+
+
+
+
+
+
+
+

@@ -16,47 +16,40 @@
         </script>
         <script src="jquery.mobile-1.1.1.min.js">
         </script>
+        <script src="../../lib/jquery.tmpl.js">
+        </script>
         <script src="my.js">
+
         </script>
     </head>
     
     <body>
         <!-- Home -->
-        <div data-role="page" id="page1">
+        <div data-role="page" id="vote-page">
             <div data-theme="a" data-role="header">
-                <h3>
+                <h3 id="title">
                     Header
                 </h3>
             </div>
-            <div data-role="content">
-                <div id="checkboxes4" data-role="fieldcontain">
-                    <fieldset data-role="controlgroup" data-type="vertical">
-                        <legend>
-                            Choose:
-                        </legend>
-                        <input id="checkbox4" name="" type="checkbox">
-                        <label for="checkbox4">
-                            Checkbox
-                        </label>
-                    </fieldset>
-                </div>
-                <div id="checkboxes5" data-role="fieldcontain">
-                    <fieldset data-role="controlgroup" data-type="vertical">
-                        <legend>
-                            Choose:
-                        </legend>
-                        <input id="checkbox5" name="" type="checkbox">
-                        <label for="checkbox5">
-                            Checkbox
-                        </label>
-                    </fieldset>
-                </div>
+            <form action="/client/vote" method="post">
+            <div data-role="content" id="container">
                 <input type="submit" data-icon="check" data-iconpos="left" value="Submit">
             </div>
+            </form>
         </div>
-        <script>
-              //App custom javascript
+        <script id="item-check"  type="text/x-jquery-tmpl">
+            {{each children}}
+            <div data-role="fieldcontain">
+                <fieldset data-role="controlgroup" data-type="vertical">
+                    <input name="ids" id="checkbox-${id}" type="checkbox" value="${id}">
+                    <label for="checkbox-${id}">
+                        ${text.caption}
+                    </label>
+                </fieldset>
+            </div>
+            {{/each}}
         </script>
+    
     </body>
 
 </html>

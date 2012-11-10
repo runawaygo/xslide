@@ -66,8 +66,7 @@ mindmaps.ApplicationController = function() {
    * Handles the open document command.
    */
   function doOpenDocument() {
-    $('#drawing-area').css('background-image', 'url("bg.JPG")')
-    $.post(baseUrl+'/get', function(data){
+    $.post('/slide', function(data){
       var doc = mindmaps.Document.fromJSON(data);
       mindmapModel.setDocument(doc);
     });
