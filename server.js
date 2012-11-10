@@ -37,6 +37,9 @@ var server = connect().use(function (req, res, next) {
   res.end();
   return;
 })
+.use('/client/vote', function (req,res){
+  
+})
 .listen(8000);
 
 // io = require('socket.io').listen(server);
