@@ -4,6 +4,53 @@
   //   socket.emit('pong', { my: 'data' });
   // });
 
+
+function chart(charttype, containerid, titles, seriesdata) {
+    switch (charttype) {
+        case "column":
+            var columnchart = new Highcharts.Chart({
+                chart: {
+                    renderTo: containerid,
+                    defaultSeriesType: "column"
+                },
+                xAxis: {
+                    categories: titles
+                },
+                series: [{
+                    name: 'vote count',
+                    data: seriesdata
+                }]
+            });
+            break;
+        case "pie":
+            var strdata = "";
+            var total  = 0;
+            for (var i = 0; i <= seriesdata.length - 1; i++) {
+                total += seriesdata[i];
+            }
+
+            for (var i = 0; i <= titles.length - 1; i++) {
+                strdata += "['" + titles[i] + "'," + (seriesdata[i] * 100) / total + "],";
+            }
+            var datashow = eval("[" + strdata + "]");
+
+            var piechart = new Highcharts.Chart({
+                chart: {
+                    renderTo: containerid,
+                    plotBackgroundColor: null,
+                    plotBorderWidth: null,
+                    plotShadow: false
+                },
+                series: [{
+                    type: 'pie',
+                    name: 'Browser share',
+                    data: datashow
+                }]
+            });
+            break;
+    }
+}
+
 function getParameterByName(name)
 {
   name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
@@ -28,9 +75,30 @@ $(function() {
 
   		$.deck('.slide');
 
-        $('.qr').each(function(index,item){
-          showQR(item,'http://' + window.location.host+ '/c/' + item.id, 512, 512);
-        })
+      $('.qr').each(function(index,item){
+        showQR(item,'http://' + window.location.host+ '/c/' + item.id, 512, 512);        
+      })
+
+      $('.vote-chart').each(function(index,item){
+        var dataChart = $(item).attr('data-chart');
+        var resultY = [];
+        var resultX = [];
+        var dataChartArray = dataChart.split('--');
+        for(var i = 0;i<dataChartArray.length;i+=3){
+          resultY.push(dataChartArray[i+1]);
+          resultX.push(dataChartArray[i+2]);
+        }
+
+        chart('column', item.id, resultY, resultX);
+      })
+
+      $(document).bind('deck.change', function(event, from, to) {
+         var $current = $('.deck-current,deck-child-current');
+         if($current.length == 0) return;
+
+
+      });
+
     })
 
 
@@ -39,4 +107,8 @@ $(function() {
         for( var id in result)
         	$("#voteCount-" + id).html( result[ id]);
     });
+
+
+
+
 });

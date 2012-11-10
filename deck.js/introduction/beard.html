@@ -38,10 +38,19 @@
 
 	<script type="text/x-jquery-tmpl" id="tmplSlide">
 		{{if text.caption.substring(text.caption.length - ':select'.length) === ':select'}}
-			<section class="slide">
+			<section class="slide" id="page-${id}">
 				<h2>${text.caption.substring(0,text.caption.length - ":select".length)}</h2>
 				<p>${'http://' + window.location.host + '/c/' + id}</p>
-				<canvas id="${id}" class="qr" data->No Canvas Support?</canvas>
+				<div style="float:left;width:50%;display:inline-block;">
+					<canvas id="${id}" class="qr" data->No Canvas Support?</canvas>
+				</div>
+				<div class="vote-chart" id="chart-${id}" data-chart="
+				{{each children}}
+						${id+'--' + text.caption + '--' + voteCount + '--'}
+				{{/each}}
+				" style="float:left;width:50%;display:inline-block;">
+				</div>
+				
 			</section>
 			<section class="slide">
 				<h2>${text.caption.substring(0,text.caption.length - ":select".length)}</h2>
@@ -52,7 +61,7 @@
 				</ol>
 			</section>
 		{{else}}
-			<section class="slide">
+			<section class="slide" id="page-${id}">
 				<h2>${text.caption}</h2>
 				<ol>
 					{{each children}}
@@ -71,64 +80,6 @@
 			</section>
 		{{/if}}
 	</script>
-    <script type="text/javascript" src="highcharts.js"></script>
-    <script type="text/javascript" src="exporting.js"></script>
-		<script type="text/javascript">
-
-		    function chart(charttype, containerid, titles, seriesdata) {
-		        switch (charttype) {
-		            case "column":
-		                var columnchart = new Highcharts.Chart({
-		                    chart: {
-		                        renderTo: containerid,
-		                        defaultSeriesType: "column"
-		                    },
-		                    xAxis: {
-		                        categories: titles
-		                    },
-		                    series: [{
-		                        name: 'vote count',
-		                        data: seriesdata
-		                    }]
-		                });
-		                break;
-		            case "pie":
-		                var strdata = "";
-		                var total  = 0;
-		                for (var i = 0; i <= seriesdata.length - 1; i++) {
-		                    total += seriesdata[i];
-		                }
-
-		                for (var i = 0; i <= titles.length - 1; i++) {
-		                    strdata += "['" + titles[i] + "'," + (seriesdata[i] * 100) / total + "],";
-		                }
-		                var datashow = eval("[" + strdata + "]");
-
-		                var piechart = new Highcharts.Chart({
-		                    chart: {
-		                        renderTo: containerid,
-		                        plotBackgroundColor: null,
-		                        plotBorderWidth: null,
-		                        plotShadow: false
-		                    },
-		                    series: [{
-		                        type: 'pie',
-		                        name: 'Browser share',
-		                        data: datashow
-		                    }]
-		                });
-		                break;
-		        }
-		    }
-
-		    $(document).ready(function () {
-		        //column/pie
-		        chart('pie', 'container', ['Apples', 'Oranges', 'Pears', 'Grapes', 'Bananas'], [5, 3, 4, 7, 2]);
-                
-
-		    });
-
-		</script>
 </head>
 
 <body class="deck-container">
@@ -163,6 +114,8 @@
 <script>window.jQuery || document.write('<script src="../jquery-1.7.2.min.js"><\/script>')</script> -->
 <script type="text/javascript" src="../../lib/jquery-1.8.2.js"></script>
 <script type="text/javascript" src="../../lib/jquery.tmpl.js"></script>
+<script type="text/javascript" src="highcharts.js"></script>
+    <script type="text/javascript" src="exporting.js"></script>
 
 <!-- Deck Core and extensions -->
 <script src="../core/deck.core.js"></script>
