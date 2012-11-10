@@ -3,9 +3,31 @@ var DATA_DEMO_FILE = "mm/data.json.backup";
 
 var mindmapProvider = {
   _instance: null,
+  _cachedVotes: null,
+  _cachedVoteOptions: null,
+  _currentPage: null,
+
+  _cache: function() {
+    this._cachedVotes = {};
+    this._cachedVoteOptions = {};
+    for( var i = 0; i < mindmap.mindmap.root.children.length; ++i) {
+      var secondLevelNode = mindmap.mindmap.root.children[ i];
+      if( ":select" === secondLevelNode.text.caption.substring( secondLevelNode.text.caption.length - ":select".length)) {
+   	    this._cachedVotes[ secondLevelNode.id] = secondLevelNode;
+        for( var j = 0; j < secondLevelNode.children.length; ++j) {
+          var thirdLevelNode = secondLevelNode.children[ j];
+          thirdLevelNode.voteCount = 0;
+          this._cachedVoteOptions[ thirdLevelNode.id] = thirdLevelNode;
+        }
+      }
+    }
+  },
 
   get: function() {
-    if( !this._instance) this._instance = this.getFile(DATA_FILE);
+    if( !this._instance) {
+    	this._instance = this.getFile(DATA_FILE);
+    	this._cache();
+    }
     return this._instance;
   },
 
@@ -15,25 +37,26 @@ var mindmapProvider = {
   },
 
   set: function(mindmap) {
-    // Detects vote pages and add voteCount properties and reset them.
-    mindmap.cachedVoteOptions = {};
-    for( var i = 0; i < mindmap.mindmap.root.children.length; ++i) {
-      var secondLevelNode = mindmap.mindmap.root.children[ i];
-      if( ":select" === secondLevelNode.text.caption.substring( secondLevelNode.text.caption.length - ":select".length))
-        for( var j = 0; j < secondLevelNode.children.length; ++j) {
-          var thirdLevelNode = secondLevelNode.children[ j];
-          thirdLevelNode.voteCount = 0;
-          mindmap.cachedVoteOptions[ thirdLevelNode.id] = thirdLevelNode;
-        }
-    }
-
-    fs.writeFileSync(DATA_FILE, JSON.stringify(mindmap));
-
     this._instance = mindmap;
+    this._cache();
+    
+    fs.writeFileSync(DATA_FILE, JSON.stringify(mindmap));
+  },
+
+  getVote: function(id) {
+    return this._cachedVotes[ id];
   },
 
   getOption: function(id) {
-    return this._instance.cachedVoteOptions[ id];
+    return this._cachedVoteOptions[ id];
+  },
+
+  getCurrentPage: function() {
+    return this._currentPage;
+  },
+
+  setCurrentPage: function(pageId) {
+    this._currentPage = pageId;
   },
 
   Void: null
@@ -97,14 +120,13 @@ var server = connect()
  */
 .use('/client/vote', function (req,res){
   if(req.method == 'GET') { // Obtaining options. From the audience
-    var rootNode = mindmapProvider.get().mindmap.root;
-    for( var i = 0; i < rootNode.children.length; ++i) {
-      var secondLevelNode = rootNode.children[ i];
-      if(secondLevelNode.id === req.query.id) {
-        res.end(JSON.stringify(secondLevelNode));
-        return;
-      }
-    }    
+    var votePage = mindmapProvider.getVote(mindmapProvider.getCurrentPage());
+    if( votePage) { // Current page is a vote page, setup the vote for the audience
+      res.end(JSON.stringify(secondLevelNode));
+    } else { // Current page is not a vote page, turn off the vote page
+      res.end("{}");
+    }
+    return;
   } else if(req.method == 'POST') { // Submitting the vote. From the audience
   	var result = {};
     var ids = req.body.ids;
@@ -121,3 +143,11 @@ var server = connect()
 .listen(8000);
 
 io = require('socket.io').listen(server);
+
+io.sockets.on('connection', function(socket) {
+  socket.on('page', function(data) {
+    console.log("The main screen has turned to page: " + data);
+    var pageId = data.current;
+    mindmapProvider.setCurrentPage( pageId);
+  });
+});
