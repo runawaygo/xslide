@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>
+        </title>
+        <link rel="stylesheet" href="jquery.mobile-1.1.1.min.css"
+        />
+        <link rel="stylesheet" href="my.css" />
+        <style>
+            /* App custom styles */
+        </style>
+        <script src="jquery.min.js">
+        </script>
+        <script src="jquery.mobile-1.1.1.min.js">
+        </script>
+        <script src="../../lib/jquery.tmpl.js">
+        </script>
+        <script src="my.js">
+
+        </script>
+    </head>
+    
+    <body>
+        <!-- Home -->
+        <div data-role="page" id="vote-page">
+            <div data-theme="a" data-role="header">
+                <h3 id="title">
+                    Header
+                </h3>
+            </div>
+            <form action="/client/vote" method="post">
+            <div data-role="content" id="container">
+                <input type="submit" data-icon="check" data-iconpos="left" value="Submit">
+            </div>
+            </form>
+        </div>
+        <script id="item-check"  type="text/x-jquery-tmpl">
+            {{each children}}
+            <div data-role="fieldcontain">
+                <fieldset data-role="controlgroup" data-type="vertical">
+                    <input name="ids" id="checkbox-${id}" type="checkbox" value="${id}">
+                    <label for="checkbox-${id}">
+                        ${text.caption}
+                    </label>
+                </fieldset>
+            </div>
+            {{/each}}
+        </script>
+    
+    </body>
+
+</html>

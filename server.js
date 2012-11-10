@@ -3,7 +3,7 @@ fs = require('fs');
 
 connect = require('connect');
 
-var mindmap = {};
+var mindmap;
 
 var server = connect().use(function (req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -25,24 +25,34 @@ var server = connect().use(function (req, res, next) {
   // return res.end();
 })
 .use('/slide', function (req, res) {
-  res.end(JSON.stringify(mindmap));
-  return;
-
-    // var data;
-    // data = fs.readFileSync('maps/' + 'map');
-    // return res.end(data);
+  if(!mindmap) {
+    mindmap = JSON.parse(fs.readFileSync('mm/' + 'data.json'));
+  }
+  res.end(JSON.stringify(mindmap));    
 })
 .use('/slide/vote', function (req,res){
   io.sockets.emit('vote', req.body.ids);
+  console.log(req.body.ids);
   res.end();
-  return;
+})
+.use('/client/vote', function (req,res){
+  if(req.method == 'GET')
+  {
+    res.end(JSON.stringify(mindmap.mindmap.root));  
+  }
+  else if(req.method == 'POST')
+  {
+    io.sockets.emit('vote', req.body.ids);
+    console.log(io.sockets);
+    res.end('你已经提交成功！');
+  }
 })
 .listen(8000);
 
-// io = require('socket.io').listen(server);
-// io.sockets.on('connection', function (socket) {
-//   socket.emit('ping', { hello: 'world' });
-//   socket.on('pong', function (data) {
-//     console.log(data);
-//   });
-// });
+io = require('socket.io').listen(server);
+io.sockets.on('connection', function (socket) {
+  socket.emit('ping', { hello: 'world' });
+  socket.on('pong', function (data) {
+    console.log(data);
+  });
+});
