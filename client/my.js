@@ -299,13 +299,30 @@ $(function(){
 
 			if(currentPageId  == node.id ) return;
 
-			currentPageId = node.id;
-			$('#title').html(node.text.caption);
-			$('#container').html('');
-		  	$('#item-check').tmpl(node).prependTo('#container');
-		  	$('#vote-page').trigger('create');
+			$.mobile.changePage('#vote-page');
+			setTimeout(function(){
+				currentPageId = node.id;
+				$('#title').html(node.text.caption);
+				$('#container').html('');
+			  	$('#item-check').tmpl(node).prependTo('#container');
+			  	$('#vote-page').trigger('create');
+			},100);
+			
 		})
-	},3000)
+	},1000)
+
+
+
+
+	$('#myform').submit(function(){
+			
+	});
+	$('#submit-btn').click(function(e){
+		$.post('/client/vote',$('#myform').serialize(),function(){
+			$.mobile.changePage('#wait-page');
+		})
+		e.preventDefault();
+	})
 })
 
 

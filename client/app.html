@@ -17,13 +17,21 @@
 			<div data-theme="a" data-role="header">
 				<h3 id="title">Header</h3>
 			</div>
-			<form action="/client/vote" method="post">
-				<div data-role="content">
-					<div  id="container">
-					</div>
-					<input type="submit" data-icon="check" data-iconpos="left" value="Submit" />
+			<div data-role="content">
+				<form action="/client/vote" method="post" id="myform">
+				<div  id="container">
 				</div>
-			</form>
+				</form>
+				<input type="submit" id="submit-btn" data-icon="check" data-iconpos="left" value="Submit" />
+			</div>
+		</div>
+		<div data-role="page" id="wait-page">
+			<div data-theme="a" data-role="header">
+				<h3 id="title">xSlide</h3>
+			</div>
+			<div data-role="content">
+				<h1>请耐心等待下一次投票！</h1>
+			</div>
 		</div>
 		<script id="item-check"  type="text/x-jquery-tmpl">
 			{{each children}}

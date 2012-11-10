@@ -119,6 +119,7 @@ var server = connect()
  * Both for obtaining vote options and for actual voting
  */
 .use('/client/vote', function (req,res){
+  console.log(req.method);
   if(req.method == 'GET') { // Obtaining options. From the audience
     var votePage = mindmapProvider.getVote(mindmapProvider.getCurrentPage());
     if( votePage) { // Current page is a vote page, setup the vote for the audience
