@@ -106,14 +106,13 @@ var server = connect()
       }
     }    
   } else if(req.method == 'POST') { // Submitting the vote. From the audience
-  	var result = {};
     var ids = req.body.ids;
     if(typeof ids == 'string') ids = [ids]; // The user checked only one option
+    var parentNode = mindmapProvider.getOption(mindmapProvider.getOption(ids[0]).parentId);
     for( var i = 0; i < ids.length; ++i) {
-  	  var id = ids[ i] + '';
-      result[ id] = ++mindmapProvider.getOption(id).voteCount;
+      ++mindmapProvider.getOption(id).voteCount;
   	}
-    io.sockets.emit('vote', result);
+    io.sockets.emit('vote', parentNode);
     res.end('你已经提交成功！');
   }
 })

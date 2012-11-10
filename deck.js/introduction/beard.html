@@ -38,11 +38,11 @@
 
 	<script type="text/x-jquery-tmpl" id="tmplSlide">
 		{{if text.caption.substring(text.caption.length - ':select'.length) === ':select'}}
-			<section class="slide" id="page-${id}">
+			<section class="slide"  id="${id}">
 				<h2>${text.caption.substring(0,text.caption.length - ":select".length)}</h2>
 				<p>${'http://' + window.location.host + '/c/' + id}</p>
 				<div style="float:left;width:50%;display:inline-block;">
-					<canvas id="${id}" class="qr" data->No Canvas Support?</canvas>
+					<canvas class="qr" data->No Canvas Support?</canvas>
 				</div>
 				<div class="vote-chart" id="chart-${id}" data-chart="
 				{{each children}}
@@ -52,21 +52,13 @@
 				</div>
 				
 			</section>
-			<section class="slide">
-				<h2>${text.caption.substring(0,text.caption.length - ":select".length)}</h2>
-				<ol>
-					{{each children}}
-						<li><h3 id="${id}">${text.caption}: <span id="voteCount-${id}">${voteCount}</span></h3></li>
-					{{/each}}
-				</ol>
-			</section>
 		{{else}}
-			<section class="slide" id="page-${id}">
+			<section class="slide"  id="${id}">
 				<h2>${text.caption}</h2>
 				<ol>
 					{{each children}}
 						<li class="slide">
-						<h3 id="${id}">${text.caption}</h3>
+						<h3>${text.caption}</h3>
 						<ol>
 							{{each children}}
 							<li>

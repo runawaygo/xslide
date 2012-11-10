@@ -9,12 +9,18 @@ function chart(charttype, containerid, titles, seriesdata) {
     switch (charttype) {
         case "column":
             var columnchart = new Highcharts.Chart({
+                title:"",
                 chart: {
                     renderTo: containerid,
                     defaultSeriesType: "column"
                 },
                 xAxis: {
-                    categories: titles
+                    categories: titles,
+                    labels:{
+                      style:{
+                        fontSize:'16px'                       
+                      }
+                    }
                 },
                 series: [{
                     name: 'vote count',
@@ -67,6 +73,21 @@ $(function() {
     var key = getParameterByName('key');
 
     $.get('/slide/'+key,function(data){
+       var socket = io.connect('http://'+ window.location.host);
+      socket.on('vote', function (parentNode) { // TIP: you can avoid listening on `connect` and listen on events directly too!
+        var elementId  = '#chart-'+parentNode.id;
+        var resultY = [];
+        var resultX = [];
+        for(var i = 0;i<parentNode.children;i++){
+          var node = parentNode[i];
+          resultY.push(node.text.caption);
+          resultX.push(node.voteCount);
+        }
+
+        chart('column', elementId , resultY, resultX);
+      });
+
+
     	var mindMap = JSON.parse(data);
   		$('#tmplTitle').tmpl(mindMap.mindmap.root).appendTo('body');
   		for (var i = 0; i < mindMap.mindmap.root.children.length; i++) {
@@ -76,7 +97,7 @@ $(function() {
   		$.deck('.slide');
 
       $('.qr').each(function(index,item){
-        showQR(item,'http://' + window.location.host+ '/c/' + item.id, 512, 512);        
+        showQR(item,'http://' + window.location.host+ '/c/', 512, 512);        
       })
 
       $('.vote-chart').each(function(index,item){
@@ -95,20 +116,11 @@ $(function() {
       $(document).bind('deck.change', function(event, from, to) {
          var $current = $('.deck-current,deck-child-current');
          if($current.length == 0) return;
-
-
+         socket.emit('page', {current:$current[0].id});
       });
 
     })
 
 
-    var socket = io.connect('http://'+ window.location.host);
-    socket.on('vote', function (result) { // TIP: you can avoid listening on `connect` and listen on events directly too!
-        for( var id in result)
-        	$("#voteCount-" + id).html( result[ id]);
-    });
-
-
-
-
+   
 });
