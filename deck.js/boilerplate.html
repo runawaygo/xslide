@@ -42,7 +42,7 @@
 <section class="slide">
 	<h1>Here</h1>
 </section>
-
+    <div id="container" style="width: 800px; height: 400px; margin: 0 auto"></div>
 <!-- End slides. -->
 
 
@@ -85,12 +85,65 @@
 <script src="extensions/status/deck.status.js"></script>
 <script src="extensions/navigation/deck.navigation.js"></script>
 <script src="extensions/scale/deck.scale.js"></script>
+<script src="highcharts.js" type="text/javascript"></script>
+<script src="exporting.js" type="text/javascript"></script>
 
 <!-- Initialize the deck. You can put this in an external file if desired. -->
 <script>
-	$(function() {
-		$.deck('.slide');
-	});
+    $(function () {
+        $.deck('.slide');
+
+        
+        var chart;
+        $(document).ready(function () {
+            chart = new Highcharts.Chart({
+                chart: {
+                    renderTo: 'container',
+                    defaultSeriesType: 'column'
+                },
+                title: {
+                    text: 'Stacked column chart'
+                },
+                xAxis: {
+                    categories: ['Apples', 'Oranges', 'Pears', 'Grapes', 'Bananas']
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: 'Total fruit consumption'
+                    }
+                },
+                legend: {
+                    align: 'right',
+                    x: -100,
+                    verticalAlign: 'top',
+                    y: 20,
+                    floating: true,
+                    backgroundColor: '#FFFFFF',
+                    borderColor: '#CCC',
+                    borderWidth: 1,
+                    shadow: false
+                },
+                tooltip: {
+                    formatter: function () {
+                        return '<b>' + this.x + '</b><br/>' +
+                             this.series.name + ': ' + this.y + '<br/>' +
+                             'Total: ' + this.point.stackTotal;
+                    }
+                },
+                plotOptions: {
+                    column: {
+                        stacking: 'normal'
+                    }
+                },
+                series: [{
+                    name: 'John',
+                    data: [5, 3, 4, 7, 2]
+                }]
+            });
+        });
+
+    });
 </script>
 </body>
 </html>
