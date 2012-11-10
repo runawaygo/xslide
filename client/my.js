@@ -302,7 +302,7 @@ $(function(){
 			$.mobile.changePage('#vote-page');
 			setTimeout(function(){
 				currentPageId = node.id;
-				$('#title').html(node.text.caption);
+				$('#title').html(node.text.caption.substring(0, node.text.caption.lastIndexOf(':')));
 				$('#container').html('');
 			  	$('#item-check').tmpl(node).prependTo('#container');
 			  	$('#vote-page').trigger('create');
