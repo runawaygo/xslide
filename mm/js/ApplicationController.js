@@ -42,7 +42,7 @@ mindmaps.ApplicationController = function() {
     if (true) {};
     var key = 'mindmap_' + doc.id + '@' + doc.title;
     localStorage.setItem(key, doc.serialize());
-    window.location = '../../deck.js/introduction/beard.html?key=' + key;
+    window.location = '../deck.js/introduction/beard.html?key=' + key;
     return;
   }
 
@@ -138,8 +138,6 @@ mindmaps.ApplicationController = function() {
   };
 
   this.init();
-
-  
 
   function slideFunction(){
     $('#toolbar,#statusbar').hide();
@@ -413,8 +411,5 @@ mindmaps.ApplicationController = function() {
     var currentNode;
     var onSlideShow = false;
   }
-
-  
   slideFunction();
-  
 };
