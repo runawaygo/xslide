@@ -143,7 +143,7 @@ var server = connect()
   }
 })
 
-.listen(8000);
+.listen(80);
 
 io = require('socket.io').listen(server);
 
