@@ -134,20 +134,20 @@ mindmaps.ApplicationController = function() {
         mindmapModel, commandRegistry);
     viewController.go();
 
-    doOpenDocument();
-    // doNewDocument();
+    // doOpenDocument();
+    doNewDocument();
   };
 
   this.init();
 
   function slideFunction(){
     $('#toolbar,#statusbar').hide();
-    // setTimeout(function(){
-    //   $('#drawing-area').width(3000);
-    //   $('#drawing-area').height(2000); 
-    // },300)
     $('#new-btn').click(function(){
       doNewDocument();
+    });
+
+    $('#add-btn').click(function(){
+      mindmapModel.createNode();
     });
 
     $('#delete-btn').click(function(){
@@ -159,31 +159,7 @@ mindmaps.ApplicationController = function() {
     $('#open-btn').click(function(){
       doOpenDocument();
     });
-    $('#show-btn').click(function(){
-      if(onSlideShow){
-        $('#show-btn').html('演示模式');
-        $('#drawing-area').unbind('click',SlideChnage)
-          .unbind('mousedown',StopDefault)
-          .unbind('mouseup',StopDefault)
-          .unbind('mousemove',StopDefault)
-        onSlideShow =false;
-      }
-      else{
-        hideAll();
-        $('#show-btn').html('编辑模式');
-        $('#drawing-area')
-          .bind('click',SlideChnage)
-          .bind('mousedown',StopDefault)
-          .bind('mouseup',StopDefault)
-          .bind('mousemove',StopDefault)
-
-
-        center();
-        onSlideShow = true;
-      }
-    });
-
-
+    
     $('#demo-btn').click(function(){
 
     });

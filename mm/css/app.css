@@ -28,9 +28,9 @@ html,body {
   height: auto !important;
   min-height: 100%;
   top:0;
-  bottom:0;
+  bottom:90px;
   right:0;
-  left:90px;
+  left:0;
 }
 #left-toolbar{
   position: absolute; /* needed for footer positioning*/
@@ -51,6 +51,18 @@ html,body {
   opacity: 0.8;
 }
 
+footer{
+  display:none;
+  position:absolute;
+  left:0;
+  right:0;
+  top:0;
+
+}
+footer button.win-command{
+  width:45px;
+}
+
 #topbar {
   border-bottom: 1px solid #AAA;
   overflow: hidden; /* causes container to stretch vertically */
@@ -58,6 +70,9 @@ html,body {
   display:none;
 }
 
+#caption-editor{
+
+}
 .logo-bg {
   background: #31A1DF; /* Old browsers */
   background: -moz-linear-gradient(left, #31A1DF 7%, #e5e5e5 100%);
@@ -215,8 +230,7 @@ html,body {
 #drawing-area {
   position: absolute;
   background-color: white;
-  /*background-image: url("../img/grid.gif");*/
-  background-image: url("../bg.JPG");
+  background-image: url("../img/grid.gif");
   /*background-size: 24px 24px;*/
   /* need this for webkit as well. */
   /*image-rendering: -moz-crisp-edges;
@@ -262,12 +276,12 @@ to {-webkit-transform: translate3d(0,100px,0) scale(1.3);background:yellow;}
   border-radius: 5px;
 }
 
-.mindmap .node-caption:hover {
+/*.mindmap .node-caption:hover {
   border: 2px dotted #DDD;
   padding: 2px;
-}
+}*/
 
-.mindmap .node-caption.selected {
+/*.mindmap .node-caption.selected {
   border: 2px solid red;
   padding: 2px;
   z-index: 1000;
@@ -278,7 +292,7 @@ to {-webkit-transform: translate3d(0,100px,0) scale(1.3);background:yellow;}
 
 .mindmap .node-caption.edit {
   border: 2px solid blue;
-}
+}*/
 
 .mindmap .node-caption.root {
 
@@ -372,6 +386,7 @@ to {-webkit-transform: translate3d(0,100px,0) scale(1.3);background:yellow;}
 }
 
 #caption-editor {
+  height:16px;
   display: block; /** important for webkit */
   resize: none;
   background: none;
