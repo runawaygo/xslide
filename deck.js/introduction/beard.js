@@ -35,7 +35,8 @@ $(function() {
 
 
 
-    socket.on('vote', function (ids) { // TIP: you can avoid listening on `connect` and listen on events directly too!
-        
+    socket.on('vote', function (result) { // TIP: you can avoid listening on `connect` and listen on events directly too!
+        for( var id in result)
+        	$("#voteCount-" + id).html( result[ id]);
     });
 });

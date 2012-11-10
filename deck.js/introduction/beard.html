@@ -43,15 +43,24 @@
 				// <p>${'http://' + window.location.host + '/vote'}</p>
 				<canvas id="${id}" class="qr" data->No Canvas Support?</canvas>
 			</section>
+			<section class="slide">
+				<h2>${text.caption}</h2>
+				<ol>
+					{{each children}}
+						<li><h3 id="${id}">${$value.text.caption}: <span id="voteCount-${id}">${voteCount}</span></h3></li>
+					{{/each}}
+				</ol>
+			</section>
+		{{else}}
+			<section class="slide">
+				<h2>${text.caption}</h2>
+				<ol>
+					{{each children}}
+						<li><h3 id="${id}">${$value.text.caption}</h3></li>
+					{{/each}}
+				</ol>
+			</section>
 		{{/if}}
-		<section class="slide">
-			<h2>${text.caption}</h2>
-			<ol>
-				{{each children}}
-					<li><h3 id="${id}">${$value.text.caption}</h3></li>
-				{{/each}}
-			</ol>
-		</section>
 	</script>
 </head>
 

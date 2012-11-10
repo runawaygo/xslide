@@ -18,6 +18,19 @@ var server = connect().use(function (req, res, next) {
 .use('/upload', function (req, res) {
   // req.body = {id:xxx , name: xxx, data: xxxx}
   mindmap = JSON.parse(req.body.data);
+
+  // Detects vote pages and add voteCount properties and reset them.
+  mindmap.cachedVoteOptions = {};
+  for( var i = 0; i < mindmap.mindmap.root.children.length; ++i) {
+    var secondLevelNode = mindmap.mindmap.root.children[ i];
+    if( ":select" === secondLevelNode.text.caption.substring( secondLevelNode.text.caption.length - ":select".length))
+    	for( var j = 0; j < secondLevelNode.children.length; ++j) {
+    		var thirdLevelNode = secondLevelNode.children[ j];
+    		thirdLevelNode.voteCount = 0;
+    		mindmap.cachedVoteOptions[ thirdLevelNode.id] = thirdLevelNode;
+    	}
+  }
+  
   res.end();
   return;
 
@@ -42,8 +55,13 @@ var server = connect().use(function (req, res, next) {
   }
   else if(req.method == 'POST')
   {
-    io.sockets.emit('vote', req.body.ids);
-    console.log(io.sockets);
+	var result = {};
+	for( var i = 0; i < req.body.ids.length; ++i) {
+		var id = req.body.ids[ i];
+		result[ id] = mindmap.cachedVoteOptions[ id].voteCount++;
+	}
+    io.sockets.emit('vote', result);
+
     res.end('你已经提交成功！');
   }
 })
