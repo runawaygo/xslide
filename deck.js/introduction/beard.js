@@ -98,8 +98,8 @@ $(function() {
   		$.deck('.slide');
 
       $('.qr').each(function(index,item){
-        showQR(item,'http://' + window.location.host+ '/c', 512, 512);        
-      })
+        showQR(item,'http://' + window.location.host+ '/c', 512, 512);
+      });
 
       $('.vote-chart').each(function(index,item){
         var dataChart = $(item).attr('data-chart');
