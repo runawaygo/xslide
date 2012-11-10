@@ -62,6 +62,64 @@
 			</section>
 		{{/if}}
 	</script>
+    <script type="text/javascript" src="highcharts.js"></script>
+    <script type="text/javascript" src="exporting.js"></script>
+		<script type="text/javascript">
+
+		    function chart(charttype, containerid, titles, seriesdata) {
+		        switch (charttype) {
+		            case "column":
+		                var columnchart = new Highcharts.Chart({
+		                    chart: {
+		                        renderTo: containerid,
+		                        defaultSeriesType: "column"
+		                    },
+		                    xAxis: {
+		                        categories: titles
+		                    },
+		                    series: [{
+		                        name: 'vote count',
+		                        data: seriesdata
+		                    }]
+		                });
+		                break;
+		            case "pie":
+		                var strdata = "";
+		                var total  = 0;
+		                for (var i = 0; i <= seriesdata.length - 1; i++) {
+		                    total += seriesdata[i];
+		                }
+
+		                for (var i = 0; i <= titles.length - 1; i++) {
+		                    strdata += "['" + titles[i] + "'," + (seriesdata[i] * 100) / total + "],";
+		                }
+		                var datashow = eval("[" + strdata + "]");
+
+		                var piechart = new Highcharts.Chart({
+		                    chart: {
+		                        renderTo: containerid,
+		                        plotBackgroundColor: null,
+		                        plotBorderWidth: null,
+		                        plotShadow: false
+		                    },
+		                    series: [{
+		                        type: 'pie',
+		                        name: 'Browser share',
+		                        data: datashow
+		                    }]
+		                });
+		                break;
+		        }
+		    }
+
+		    $(document).ready(function () {
+		        //column/pie
+		        chart('pie', 'container', ['Apples', 'Oranges', 'Pears', 'Grapes', 'Bananas'], [5, 3, 4, 7, 2]);
+                
+
+		    });
+
+		</script>
 </head>
 
 <body class="deck-container">
