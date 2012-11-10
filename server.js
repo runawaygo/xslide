@@ -17,8 +17,7 @@ var server = connect().use(function (req, res, next) {
 .use('/', connect.static(__dirname + '/'))
 .use('/upload', function (req, res) {
   // req.body = {id:xxx , name: xxx, data: xxxx}
-  mindmap = req.body.data;
-  console.log(req.body.data);
+  mindmap = JSON.parse(req.body.data);
   res.end();
   return;
 
