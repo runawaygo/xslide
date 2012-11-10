@@ -36,13 +36,16 @@ mindmaps.ApplicationController = function() {
   function doSaveDocument() {
     var doc = mindmapModel.getDocument();
     doc.prepareSave();
-    // $.post(baseUrl + '/upload',{name:doc.title,data:doc.serialize()},function(){
-    //   alert('Success')
-    // });
-    if (true) {};
-    var key = 'mindmap_' + doc.id + '@' + doc.title;
-    localStorage.setItem(key, doc.serialize());
-    window.location = '../deck.js/introduction/beard.html?key=' + key;
+    $.post('/upload',{id:doc.id, name:doc.title,data:doc.serialize()},function(){
+      window.location = '../deck.js/introduction/beard.html?key=' + doc.id;
+    });
+
+    // var doc = mindmapModel.getDocument();
+    // doc.prepareSave();
+    // if (true) {};
+    // var key = 'mindmap_' + doc.id + '@' + doc.title;
+    // localStorage.setItem(key, doc.serialize());
+    // window.location = '../deck.js/introduction/beard.html?key=' + key;
     return;
   }
 
@@ -66,7 +69,6 @@ mindmaps.ApplicationController = function() {
     $('#drawing-area').css('background-image', 'url("bg.JPG")')
     $.post(baseUrl+'/get', function(data){
       var doc = mindmaps.Document.fromJSON(data);
-
       mindmapModel.setDocument(doc);
     });
 
