@@ -15,7 +15,15 @@ var server = connect().use(function (req, res, next) {
 .use(connect.query())
 .use(connect.bodyParser())
 .use('/', connect.static(__dirname + '/'))
+.use('/c', function(req,res){
+  res.statusCode = 307;
+  var id = req.url.substring(1);
+  res.setHeader('location', '/client/app.html?key='+ id);
+  res.end();
+})
 .use('/upload', function (req, res) {
+  
+
   // req.body = {id:xxx , name: xxx, data: xxxx}
   mindmap = JSON.parse(req.body.data);
 
@@ -31,11 +39,8 @@ var server = connect().use(function (req, res, next) {
     	}
   }
   
-  res.end();
-  return;
-
-  // fs.writeFileSync('maps/' + 'map', req.body.data);
-  // return res.end();
+  fs.writeFileSync('mm/' + 'data.json', JSON.stringify(mindmap));
+  return res.end();
 })
 .use('/slide', function (req, res) {
   if(!mindmap) {
@@ -45,21 +50,32 @@ var server = connect().use(function (req, res, next) {
 })
 .use('/slide/vote', function (req,res){
   io.sockets.emit('vote', req.body.ids);
-  console.log(req.body.ids);
   res.end();
 })
 .use('/client/vote', function (req,res){
   if(req.method == 'GET')
   {
-    res.end(JSON.stringify(mindmap.mindmap.root));  
+    console.log(mindmap)
+    for( var i = 0; i < mindmap.mindmap.root.children.length; ++i) {
+      var secondLevelNode = mindmap.mindmap.root.children[ i];
+      if(secondLevelNode.id === req.query.id){
+        res.end(JSON.stringify(secondLevelNode));      
+        return;
+      }
+    }    
   }
   else if(req.method == 'POST')
   {
-	var result = {};
-	for( var i = 0; i < req.body.ids.length; ++i) {
-		var id = req.body.ids[ i];
-		result[ id] = mindmap.cachedVoteOptions[ id].voteCount++;
-	}
+  	var result = {};
+    var ids = req.body.ids;
+    if(typeof ids == 'string') ids = [ids];
+  	for( var i = 0; i < ids.length; ++i) {
+  		var id = ids[ i] + '';
+      console.log(id)
+      console.log(mindmap.cachedVoteOptions)
+      console.log(typeof id);
+  		result[ id] =  ++mindmap.cachedVoteOptions[ id].voteCount;
+  	}
     io.sockets.emit('vote', result);
 
     res.end('你已经提交成功！');
@@ -69,8 +85,8 @@ var server = connect().use(function (req, res, next) {
 
 io = require('socket.io').listen(server);
 io.sockets.on('connection', function (socket) {
-  socket.emit('ping', { hello: 'world' });
-  socket.on('pong', function (data) {
-    console.log(data);
-  });
+  // socket.emit('ping', { hello: 'world' });
+  // socket.on('pong', function (data) {
+  //   console.log(data);
+  // });
 });

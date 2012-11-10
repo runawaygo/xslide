@@ -39,12 +39,12 @@
 	<script type="text/x-jquery-tmpl" id="tmplSlide">
 		{{if text.caption.substring(text.caption.length - ':select'.length) === ':select'}}
 			<section class="slide">
-				<h2>${text.caption}</h2>
-				// <p>${'http://' + window.location.host + '/vote'}</p>
+				<h2>${text.caption.substring(0,text.caption.length - ":select".length)}</h2>
 				<canvas id="${id}" class="qr" data->No Canvas Support?</canvas>
+				<p>${'http://' + window.location.host + '/c/' + id}</p>
 			</section>
 			<section class="slide">
-				<h2>${text.caption}</h2>
+				<h2>${text.caption.substring(0,text.caption.length - ":select".length)}</h2>
 				<ol>
 					{{each children}}
 						<li><h3 id="${id}">${$value.text.caption}: <span id="voteCount-${id}">${voteCount}</span></h3></li>

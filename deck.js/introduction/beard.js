@@ -29,12 +29,12 @@ $(function() {
   		$.deck('.slide');
 
         $('.qr').each(function(index,item){
-        showQR(item,'http://' + window.location.host+ '/client/app.html?key=' + item.id, 512, 512);
+          showQR(item,'http://' + window.location.host+ '/c/' + item.id, 512, 512);
         })
     })
 
 
-
+    var socket = io.connect('http://'+ window.location.host);
     socket.on('vote', function (result) { // TIP: you can avoid listening on `connect` and listen on events directly too!
         for( var id in result)
         	$("#voteCount-" + id).html( result[ id]);

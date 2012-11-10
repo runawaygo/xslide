@@ -290,7 +290,9 @@ function getParameterByName(name)
 }
 
 $(function(){
-	$.get('/client/vote',getParameterByName('key'),function(data){
+	console.log('superwolf');
+	$.get('/client/vote',{id:getParameterByName('key')},function(data){
+		console.log(data);
 		var node = JSON.parse(data);
 		$('#title').html(node.text.caption);
 	  	$('#item-check').tmpl(node).prependTo('#container');
