@@ -32,6 +32,15 @@
 
 	<script type="text/x-jquery-tmpl" id="tmplTitle">
 		<section class="slide">
+			<h2>${'http://' + window.location.host + '/c'}</h2>
+			<p>请拿出手机扫描二维码，或输入网址，以便与讲师互动</p>
+			<div style="text-align: center">
+				<div style="width:50%;display:inline-block;">
+					<canvas class="qr">No Canvas Support?</canvas>
+				</div>
+			</div>
+		</section>
+		<section class="slide">
 			<h1>${text.caption}</h1>
 		</section>
 	</script>
@@ -43,7 +52,7 @@
 				<p>${'http://' + window.location.host + '/c'}</p>
 
 				<div style="float:left;width:50%;display:inline-block;">
-					<canvas class="qr" data->No Canvas Support?</canvas>
+					<canvas class="qr">No Canvas Support?</canvas>
 				</div>
 				<div class="vote-chart" id="chart-${id}" data-chart="
 				{{each children}}
