@@ -34,13 +34,22 @@ function chart(charttype, containerid, titles, seriesdata) {
             for (var i = 0; i <= seriesdata.length - 1; i++) {
                 total += seriesdata[i];
             }
+            if(total ===0){
+              for (var i = 0; i <= seriesdata.length - 1; i++) {
+                  seriesdata[i] = 1;
+              } 
+              total =seriesdata.length;
+            }
+
 
             for (var i = 0; i <= titles.length - 1; i++) {
                 strdata += "['" + titles[i] + "'," + (seriesdata[i] * 100) / total + "],";
             }
+            strdata = strdata.substring(0,strdata.length-1);
             var datashow = eval("[" + strdata + "]");
 
             var piechart = new Highcharts.Chart({
+                title:"",
                 chart: {
                     renderTo: containerid,
                     plotBackgroundColor: null,
@@ -55,6 +64,25 @@ function chart(charttype, containerid, titles, seriesdata) {
             });
             return piechart;
     }
+}
+
+function chartUpdate(chartObject, node){
+  if(node.text.caption.indexOf(':select')>0)
+  {
+    var resultX = [];
+    for(var i = 0; i < node.children.length; i++){
+      resultX.push(node.children[i].voteCount);
+    }
+    chartObject.series[0].setData(resultX);
+  }
+  else{
+    var resultX = [];
+    for(var i = 0; i < node.children.length; i++){
+      resultX.push([node.children[i].text.caption, node.children[i].voteCount ]);
+    }
+    console.log(resultX);
+   chartObject.series[0].setData(resultX);
+  }
 }
 
 function getParameterByName(name)
@@ -129,11 +157,9 @@ $(function() {
       socket.on('vote', function (node) { // TIP: you can avoid listening on `connect` and listen on events directly too!
     	  if( IMMEDIATE_UPDATE) {
     	      var chartObject = window[ 'chartObject-chart-' + node.id];
-    	      var resultX = [];
-    	      for(var i = 0; i < node.children.length; i++){
-    	        resultX.push(node.children[i].voteCount);
-    	      }
-    	      chartObject.series[0].setData(resultX);
+    	      
+            chartUpdate(chartObject, node);
+
     	  } else {
     	        lastUpdate = new Date();
     	        parentNode = node;

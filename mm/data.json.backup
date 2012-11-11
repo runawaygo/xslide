@@ -1009,7 +1009,7 @@
 				"id": "0b9157bf-dc77-46a7-ac10-ddd681a92c1a",
 				"parentId": "653607fb-cea7-450f-b7b9-c04cade3eb6c",
 				"text": {
-					"caption": "统计在场男女比例:select",
+					"caption": "统计在场男女比例:radio",
 					"font": {
 						"style": "normal",
 						"weight": "normal",

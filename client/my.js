@@ -306,7 +306,7 @@ $(function(){
 
 				$('#title').html(node.text.caption.substring(0, votes[0]));
 				$('#container').html('');
-				if(votes[1] == 'select' && false)
+				if(votes[1] == 'select')
 				{
 					$('#item-check').tmpl(node).prependTo('#container');	
 				}
