@@ -71,14 +71,15 @@ function getParameterByName(name)
 
 $(function() {
     var key = getParameterByName('key');
+    var parentNode;
+    var lastUpdate;
+    setInterval(function(){
+      var now = new Date();
+      if(!lastUpdate || lastUpdate.getTime()+2000 < now.getTime()) return;
 
-    $.get('/slide/'+key,function(data){
-       var socket = io.connect('http://'+ window.location.host);
-      socket.on('vote', function (parentNode) { // TIP: you can avoid listening on `connect` and listen on events directly too!
-        var elementId  = 'chart-'+parentNode.id;
+      var elementId  = 'chart-'+parentNode.id;
         var resultY = [];
         var resultX = [];
-        console.log(parentNode);
         for(var i = 0;i<parentNode.children.length;i++){
           var node = parentNode.children[i];
           resultY.push(node.text.caption);
@@ -86,6 +87,13 @@ $(function() {
         }
 
         chart('column', elementId , resultY, resultX);
+    },2000);
+
+    $.get('/slide/'+key,function(data){
+      var socket = io.connect('http://'+ window.location.host);
+      socket.on('vote', function (node) { // TIP: you can avoid listening on `connect` and listen on events directly too!
+        lastUpdate = new Date();
+        parentNode = node;
       });
 
 
