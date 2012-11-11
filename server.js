@@ -62,7 +62,7 @@ var mindmapProvider = {
   Void: null
 }
 
-var tucaoList = [];
+var tucaoList = ["ORZ","爱你一万年","杭州人民爱晚风","今天我们十八大","11.11单身快乐","创新，创造，创意","冬天来了，春天还会远吗","黑夜给了我黑色的眼睛，我却用它寻找光明"];
 
 var fs = require('fs');
 var connect = require('connect');
@@ -151,9 +151,10 @@ var server = connect()
 .use('/client/tucao', function(req, res) {
   var tucao = req.body.tucao;
   if( tucao) {
-    tucaoList[ tucaoList.length] = tucao;
+    tucaoList.push(tucao);
     io.sockets.emit('tucao', tucao);
   }
+  res.end();
 })
 
 /**

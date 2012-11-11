@@ -69,6 +69,37 @@ function getParameterByName(name)
     return decodeURIComponent(results[1].replace(/\+/g, " "));
 }
 
+
+function RandomArray(count){
+  var original=new Array;//原始数组 
+  //给原始数组original赋值 
+  for (var i=0;i<count;i++){ 
+   original[i]=i+1; 
+  } 
+  original.sort(function(){ return 0.5 - Math.random(); }); 
+  return original;
+}
+
+var randomArray = RandomArray(1000);
+
+function GenerateSimpleAnimation(origin, target){
+  var name = 'random' + randomArray.pop();
+  var keyframes = '@-webkit-keyframes '+ name +' { '+
+                    '0% {-webkit-transform: translate3d('+ origin.x+'px,'+ origin.y+'px,0) scale(1)}'+
+                    '100% {-webkit-transform: translate3d('+ target.x+'px,'+ target.y+'px,0) scale(1)}'+
+                  '}';
+
+  if( document.styleSheets && document.styleSheets.length ) {
+    console.log(keyframes)
+      document.styleSheets[0].insertRule( keyframes, 0 );
+  } else {
+    var s = document.createElement( 'style' );
+    s.innerHTML = keyframes;
+    document.getElementsByTagName( 'head' )[ 0 ].appendChild( s );
+  }
+  return name;
+}  
+
 var IMMEDIATE_UPDATE = true;
 
 $(function() {
@@ -157,7 +188,28 @@ $(function() {
       });
 
       function TuCao(){
-        
+        $.get('/tucaoMessages',function(data){
+          var messages = JSON.parse(data);
+          console.log(messages);
+          messages = messages.concat(messages,messages); 
+          console.log(messages);
+
+          var screenWidth = window.innerWidth;
+          var screenHeight = window.innerHeight;
+          var thread = setInterval(function(){
+            if(messages.length == 1) clearTimeout(thread);
+
+            var y = Math.random() * screenHeight;
+            var animationName = GenerateSimpleAnimation({x:screenWidth, y:y},{x:-600, y:y});
+            var element = document.createElement('div');
+
+            element.style['-webkit-animation'] = animationName + ' 6s ease-in-out forwards infinite';
+            element.style.position = 'absolute';
+            element.innerHTML = messages.pop();
+            $('body').append(element);
+
+          },100);
+        })
       }
     })
 });
