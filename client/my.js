@@ -295,7 +295,7 @@ $(function(){
 		$.get('/client/vote',function(data){
 			var node = JSON.parse(data);
 			if(node.notVote) return;
-
+			$.mobile.defaultPageTransition = 'flow';
 
 			if(currentPageId  == node.id ) return;
 
