@@ -62,6 +62,8 @@ var mindmapProvider = {
   Void: null
 }
 
+var tucaoList = [];
+
 var fs = require('fs');
 var connect = require('connect');
 
@@ -141,6 +143,24 @@ var server = connect()
     io.sockets.emit('vote', parentNode);
     res.end('你已经提交成功！');
   }
+})
+
+/**
+ * TU CAO TU CAO TU CAO AO AO AO ~
+ */
+.use('/client/tucao', function(req, res) {
+  var tucao = req.body.tucao;
+  if( tucao) {
+    tucaoList[ tucaoList.length] = tucao;
+    io.sockets.emit('tucao', tucao);
+  }
+})
+
+/**
+ * Gets TU CAO's in batch
+ */
+.use('/tucaoMessages', function(req, res) {
+  res.end( JSON.stringify(tucaoList));
 })
 
 .listen(80);
