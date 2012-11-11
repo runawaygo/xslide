@@ -14,7 +14,7 @@ var mindmapProvider = {
       var secondLevelNode = this._instance.mindmap.root.children[ i];
       if(
         ":select" === secondLevelNode.text.caption.substring( secondLevelNode.text.caption.length - ":select".length)
-        ":radio" === secondLevelNode.text.caption.substring( secondLevelNode.text.caption.length - ":radio".length)
+        || ":radio" === secondLevelNode.text.caption.substring( secondLevelNode.text.caption.length - ":radio".length)
       ) {
    	    this._cachedVotes[ secondLevelNode.id] = secondLevelNode;
         for( var j = 0; j < secondLevelNode.children.length; ++j) {
