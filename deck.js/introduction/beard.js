@@ -27,7 +27,7 @@ function chart(charttype, containerid, titles, seriesdata) {
                     data: seriesdata
                 }]
             });
-            break;
+            return columnchart;
         case "pie":
             var strdata = "";
             var total  = 0;
@@ -53,7 +53,7 @@ function chart(charttype, containerid, titles, seriesdata) {
                     data: datashow
                 }]
             });
-            break;
+            return piechart;
     }
 }
 
@@ -69,33 +69,45 @@ function getParameterByName(name)
     return decodeURIComponent(results[1].replace(/\+/g, " "));
 }
 
+var IMMEDIATE_UPDATE = true;
+
 $(function() {
     var key = getParameterByName('key');
     var parentNode;
     var lastUpdate;
-    setInterval(function(){
-      var now = new Date();
-      if(!lastUpdate || lastUpdate.getTime()+2000 < now.getTime()) return;
-
-      var elementId  = 'chart-'+parentNode.id;
-        var resultY = [];
-        var resultX = [];
-        for(var i = 0;i<parentNode.children.length;i++){
-          var node = parentNode.children[i];
-          resultY.push(node.text.caption);
-          resultX.push(node.voteCount);
-        }
-
-        chart('column', elementId , resultY, resultX);
-    },2000);
+    if( !IMMEDIATE_UPDATE) {
+	    setInterval(function(){
+	      var now = new Date();
+	      if(!lastUpdate || lastUpdate.getTime()+2000 < now.getTime()) return;
+	
+	      var elementId  = 'chart-'+parentNode.id;
+	      var resultY = [];
+	      var resultX = [];
+	      for(var i = 0;i<parentNode.children.length;i++){
+	        var node = parentNode.children[i];
+	        resultY.push(node.text.caption);
+	        resultX.push(node.voteCount);
+	      }
+	
+	      chart('column', elementId , resultY, resultX);
+	    },2000);
+    }
 
     $.get('/slide/'+key,function(data){
       var socket = io.connect('http://'+ window.location.host);
       socket.on('vote', function (node) { // TIP: you can avoid listening on `connect` and listen on events directly too!
-        lastUpdate = new Date();
-        parentNode = node;
+    	  if( IMMEDIATE_UPDATE) {
+    	      var chartObject = window[ 'chartObject-chart-' + node.id];
+    	      var resultX = [];
+    	      for(var i = 0; i < node.children.length; i++){
+    	        resultX.push(node.children[i].voteCount);
+    	      }
+    	      chartObject.series[0].setData(resultX);
+    	  } else {
+    	        lastUpdate = new Date();
+    	        parentNode = node;
+    	  }
       });
-
 
     	var mindMap = JSON.parse(data);
   		$('#tmplTitle').tmpl(mindMap.mindmap.root).appendTo('body');
@@ -116,11 +128,11 @@ $(function() {
         var dataChartArray = dataChart.split('--');
         for(var i = 0;i<dataChartArray.length-1;i+=3){
           resultY.push(dataChartArray[i+1]);
-          resultX.push(dataChartArray[i+2]);
+          resultX.push(parseInt( dataChartArray[i+2]));
         }
         console.log(resultY);
         console.log(resultX);
-        chart('column', item.id, resultY, resultX);
+        window[ "chartObject-" + item.id] = chart('column', item.id, resultY, resultX);
       })
 
       $(document).bind('deck.change', function(event, from, to) {
