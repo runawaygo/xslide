@@ -45,6 +45,16 @@
 				<input type="submit" id="submit-btn" data-icon="check" data-iconpos="left" value="Submit" />
 			</div>
 		</div>
+		<script id="item-radio" type="text/x-jquery-tmpl">
+			<fieldset data-role="controlgroup" data-type="vertical">
+		        {{each children}}
+			        <input id="radio-${id}" name="ids" value="${id}" type="radio">
+			        <label for="radio-${id}">
+			            ${text.caption}
+			        </label>
+				{{/each}}
+		    </fieldset>
+		</script>
 		<script id="item-check"  type="text/x-jquery-tmpl">
 			{{each children}}
 				<div data-role="fieldcontain">

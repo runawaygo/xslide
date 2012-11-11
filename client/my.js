@@ -302,9 +302,18 @@ $(function(){
 			$.mobile.changePage('#vote-page');
 			setTimeout(function(){
 				currentPageId = node.id;
-				$('#title').html(node.text.caption.substring(0, node.text.caption.lastIndexOf(':')));
+				var votes = node.text.caption.split(':');
+
+				$('#title').html(node.text.caption.substring(0, votes[0]));
 				$('#container').html('');
-			  	$('#item-check').tmpl(node).prependTo('#container');
+				if(votes[1] == 'select' && false)
+				{
+					$('#item-check').tmpl(node).prependTo('#container');	
+				}
+				else{
+					$('#item-radio').tmpl(node).prependTo('#container');		
+				}
+			  	
 			  	$('#vote-page').trigger('create');
 			},100);
 			
