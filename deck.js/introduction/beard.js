@@ -96,6 +96,13 @@ $(function() {
         parentNode = node;
       });
 
+      socket.on('tucao', function (tucao) { // TIP: you can avoid listening on `connect` and listen on events directly too!
+        $('#running-box').html(tucao).addClass('fadeInLeft');
+        setTimeout(function(){  
+          $('#running-box').removeClass('fadeInLeft');
+        },1100);
+      });
+
 
     	var mindMap = JSON.parse(data);
   		$('#tmplTitle').tmpl(mindMap.mindmap.root).appendTo('body');
@@ -129,11 +136,15 @@ $(function() {
             if($current.length == 0) return;
             socket.emit('page', {current:$current[0].id});
           },100);
-         
+          console.log(to);
+          console.log($('.slide').length);
+          if($('.slide').length-1 == to){
+            TuCao();
+          }
       });
 
+      function TuCao(){
+        
+      }
     })
-
-
-   
 });

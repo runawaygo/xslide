@@ -319,9 +319,15 @@ $(function(){
 	});
 	$('#submit-btn').click(function(e){
 		$.post('/client/vote',$('#myform').serialize(),function(){
-			$.mobile.changePage('#wait-page');
+			$.mobile.changePage('#tucao-page');
 		})
 		e.preventDefault();
+	})
+	$('#tucao-btn').click(function(e){
+		$.post('/client/tucao',$('#tucao-form').serialize(),function(){
+
+		})
+		e.preventDefault();		
 	})
 })
 

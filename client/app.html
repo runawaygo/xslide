@@ -13,6 +13,26 @@
 	</head>
 	<body>
 		<!-- Home -->
+		<div data-role="page" id="tucao-page">
+			<div data-theme="a" data-role="header">
+				<h3>xSlide</h3>
+			</div>
+			<div data-role="content">
+				<form action="/client/vote" method="post" id="tucao-form">
+					<fieldset data-role="controlgroup">
+                        <label for="textinput1">
+                            吐槽
+                        </label>
+                        <input name="tucao" id="tucao" placeholder="请大力吐槽" value="" type="text">
+                    </fieldset>
+				</form>
+				<input type="submit" id="tucao-btn" data-icon="check" data-iconpos="left" value="Submit" />
+			</div>
+			<div data-role="content">
+				<h1>请耐心等待下一次投票！</h1>
+			</div>
+		</div>
+
 		<div data-role="page" id="vote-page">
 			<div data-theme="a" data-role="header">
 				<h3 id="title">Header</h3>
@@ -23,14 +43,6 @@
 				</div>
 				</form>
 				<input type="submit" id="submit-btn" data-icon="check" data-iconpos="left" value="Submit" />
-			</div>
-		</div>
-		<div data-role="page" id="wait-page">
-			<div data-theme="a" data-role="header">
-				<h3 id="title">xSlide</h3>
-			</div>
-			<div data-role="content">
-				<h1>请耐心等待下一次投票！</h1>
 			</div>
 		</div>
 		<script id="item-check"  type="text/x-jquery-tmpl">

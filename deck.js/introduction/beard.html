@@ -27,7 +27,26 @@
 	
 	<!-- Transition theme. More available in /themes/transition/ or create your own. -->
 	<link rel="stylesheet" href="../themes/transition/horizontal-slide.css">
+	<link rel="stylesheet" href="animate.css">
 	
+	<style>
+	#running-box{
+		position:absolute;
+		bottom:0;
+		width:auto;
+		height:45px;
+		left:0;
+		background:rgba(0,100,155,0.3);
+		padding-left:20px;
+		padding-right:20px;
+		z-index: 100;
+		font-size:32px;
+		color:red;
+	}
+
+
+	</style>
+
 	<script src="../modernizr.custom.js"></script>
 
 	<script type="text/x-jquery-tmpl" id="tmplTitle">
@@ -76,6 +95,8 @@
 </head>
 
 <body class="deck-container">
+
+<div id="running-box" class="animated"></div>
 
 <!-- deck.navigation snippet -->
 <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
