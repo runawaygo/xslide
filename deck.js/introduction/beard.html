@@ -73,32 +73,48 @@
 				<div style="float:left;width:50%;display:inline-block;">
 					<canvas class="qr">No Canvas Support?</canvas>
 				</div>
-				<div class="vote-chart" id="chart-${id}" data-chart="
+				<div class="vote-chart" id="chart-${id}" data-chart-type="column" data-chart="
 				{{each children}}
 						${id+'--' + text.caption + '--' + voteCount + '--'}
 				{{/each}}
 				" style="float:left;display:inline-block;width:50%;height:463px;">
 				</div>
-				
 			</section>
 		{{else}}
-			<section class="slide"  id="${id}">
-				<h2>${text.caption}</h2>
-				<ol>
+			{{if text.caption.substring(text.caption.length - ':radio'.length) === ':radio'}}
+				<section class="slide"  id="${id}">
+					<h2>${text.caption.substring(0,text.caption.length - ":radio".length)}</h2>
+					<p>${'http://' + window.location.host + '/c'}</p>
+	
+					<div style="float:left;width:50%;display:inline-block;">
+						<canvas class="qr">No Canvas Support?</canvas>
+					</div>
+					<div class="vote-chart" id="chart-${id}" data-chart-type="pie" data-chart="
 					{{each children}}
-						<li class="slide">
-						<h3>${text.caption}</h3>
-						<ol>
+							${id+'--' + text.caption + '--' + voteCount + '--'}
+						{{/each}}
+					" style="float:left;display:inline-block;width:50%;height:463px;">
+					</div>
+				</section>
+			{{else}}
+				<section class="slide"  id="${id}">
+					<h2>${text.caption}</h2>
+					<ol>
 							{{each children}}
-							<li>
-								${text.caption}
-							</li>
+								<li class="slide">
+									<h3>${text.caption}</h3>
+									<ol>
+										{{each children}}
+										<li>
+											${text.caption}
+										</li>
+										{{/each}}
+									</ol>
+								</li>
 							{{/each}}
-						</ol>
-						</li>
-					{{/each}}
-				</ol>
-			</section>
+					</ol>
+				</section>
+			{{/if}}
 		{{/if}}
 	</script>
 </head>

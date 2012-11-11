@@ -171,7 +171,7 @@ $(function() {
         }
         console.log(resultY);
         console.log(resultX);
-        window[ "chartObject-" + item.id] = chart('column', item.id, resultY, resultX);
+        window[ "chartObject-" + item.id] = chart($(item).attr('data-chart-type'), item.id, resultY, resultX);
       })
 
       $(document).bind('deck.change', function(event, from, to) {
