@@ -43,7 +43,7 @@ var mindmapProvider = {
     this._instance = mindmap;
     this._cache();
     
-    fs.writeFileSync(DATA_FILE, JSON.stringify(mindmap));
+    // fs.writeFileSync(DATA_FILE, JSON.stringify(mindmap));
   },
 
   getVote: function(id) {
