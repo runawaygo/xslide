@@ -1,1162 +1,931 @@
 {
-	"id": "856cb684-fcfc-43f2-b8ae-d3350dee787d",
-	"title": "xSlide",
-	"mindmap": {
-		"root": {
-			"id": "653607fb-cea7-450f-b7b9-c04cade3eb6c",
-			"parentId": null,
-			"text": {
-				"caption": "xSlide",
-				"font": {
-					"style": "normal",
-					"weight": "bold",
-					"decoration": "none",
-					"size": 26,
-					"color": "#000"
-				}
-			},
-			"offset": {
-				"x": 0,
-				"y": 0
-			},
-			"foldChildren": false,
-			"branchColor": "#000",
-			"children": [{
-				"id": "20ec8232-1d9a-410a-b9bd-bea317c58e4d",
-				"parentId": "653607fb-cea7-450f-b7b9-c04cade3eb6c",
-				"text": {
-					"caption": "Team",
-					"font": {
-						"style": "normal",
-						"weight": "normal",
-						"decoration": "none",
-						"size": 18,
-						"color": "#000"
-					}
-				},
-				"offset": {
-					"x": -567,
-					"y": -125
-				},
-				"foldChildren": false,
-				"branchColor": "#a47293",
-				"children": [{
-					"id": "f69ebecf-407a-4571-9035-e44ea2f7f371",
-					"parentId": "20ec8232-1d9a-410a-b9bd-bea317c58e4d",
-					"text": {
-						"caption": "青山老妖",
-						"font": {
-							"style": "normal",
-							"weight": "normal",
-							"decoration": "none",
-							"size": 18,
-							"color": "#000"
-						}
-					},
-					"offset": {
-						"x": -170,
-						"y": -28
-					},
-					"foldChildren": false,
-					"branchColor": "#a47293",
-					"children": [{
-						"id": "5a718d38-247c-4248-b387-a15022902ee2",
-						"parentId": "f69ebecf-407a-4571-9035-e44ea2f7f371",
-						"text": {
-							"caption": "上海CNode社区成员",
-							"font": {
-								"style": "normal",
-								"weight": "normal",
-								"decoration": "none",
-								"size": 18,
-								"color": "#000"
-							}
-						},
-						"offset": {
-							"x": -209,
-							"y": -63
-						},
-						"foldChildren": false,
-						"branchColor": "#a47293",
-						"children": []
-					}, {
-						"id": "cb451624-74b7-4e1e-b958-a21c00cdb61b",
-						"parentId": "f69ebecf-407a-4571-9035-e44ea2f7f371",
-						"text": {
-							"caption": "信义通技术顾问",
-							"font": {
-								"style": "normal",
-								"weight": "normal",
-								"decoration": "none",
-								"size": 18,
-								"color": "#000"
-							}
-						},
-						"offset": {
-							"x": -223,
-							"y": 24
-						},
-						"foldChildren": false,
-						"branchColor": "#a47293",
-						"children": []
-					}, {
-						"id": "e5580eb1-4dfc-4abd-8d78-0921ec43c3cb",
-						"parentId": "f69ebecf-407a-4571-9035-e44ea2f7f371",
-						"text": {
-							"caption": "负责: anything",
-							"font": {
-								"style": "normal",
-								"weight": "normal",
-								"decoration": "none",
-								"size": 18,
-								"color": "#000"
-							}
-						},
-						"offset": {
-							"x": -340.933349609375,
-							"y": 43
-						},
-						"foldChildren": false,
-						"branchColor": "#a47293",
-						"children": []
-					}]
-				}, {
-					"id": "c85d9e6d-9e87-4ce4-ab4d-5a839770507d",
-					"parentId": "20ec8232-1d9a-410a-b9bd-bea317c58e4d",
-					"text": {
-						"caption": "Bagana",
-						"font": {
-							"style": "normal",
-							"weight": "normal",
-							"decoration": "none",
-							"size": 18,
-							"color": "#000"
-						}
-					},
-					"offset": {
-						"x": -153.78870189888403,
-						"y": 48
-					},
-					"foldChildren": false,
-					"branchColor": "#a47293",
-					"children": [{
-						"id": "49d8ebb0-e3c4-4977-9596-361317c4a45b",
-						"parentId": "c85d9e6d-9e87-4ce4-ab4d-5a839770507d",
-						"text": {
-							"caption": "Ericsson",
-							"font": {
-								"style": "normal",
-								"weight": "normal",
-								"decoration": "none",
-								"size": 18,
-								"color": "#000"
-							}
-						},
-						"offset": {
-							"x": -156.49729250464588,
-							"y": -3
-						},
-						"foldChildren": false,
-						"branchColor": "#a47293",
-						"children": []
-					}, {
-						"id": "e3b0ac03-dd37-447c-8fca-e7bae32be3a4",
-						"parentId": "c85d9e6d-9e87-4ce4-ab4d-5a839770507d",
-						"text": {
-							"caption": "负责: everything",
-							"font": {
-								"style": "normal",
-								"weight": "normal",
-								"decoration": "none",
-								"size": 18,
-								"color": "#000"
-							}
-						},
-						"offset": {
-							"x": -240.73333740234375,
-							"y": 56
-						},
-						"foldChildren": false,
-						"branchColor": "#a47293",
-						"children": []
-					}]
-				}, {
-					"id": "e06c7cc3-1b93-4eac-b154-b802f5d3377d",
-					"parentId": "20ec8232-1d9a-410a-b9bd-bea317c58e4d",
-					"text": {
-						"caption": "高旭",
-						"font": {
-							"style": "normal",
-							"weight": "normal",
-							"decoration": "none",
-							"size": 18,
-							"color": "#000"
-						}
-					},
-					"offset": {
-						"x": -154.35533561045304,
-						"y": 136
-					},
-					"foldChildren": false,
-					"branchColor": "#a47293",
-					"children": [{
-						"id": "61597bce-014d-4897-94e9-c8b7c1a51219",
-						"parentId": "e06c7cc3-1b93-4eac-b154-b802f5d3377d",
-						"text": {
-							"caption": "美特斯邦威前端架构师",
-							"font": {
-								"style": "normal",
-								"weight": "normal",
-								"decoration": "none",
-								"size": 18,
-								"color": "#000"
-							}
-						},
-						"offset": {
-							"x": -157.56599991582334,
-							"y": -5
-						},
-						"foldChildren": false,
-						"branchColor": "#a47293",
-						"children": []
-					}, {
-						"id": "70b03960-93b0-4958-8d81-eaaa188bb8c4",
-						"parentId": "e06c7cc3-1b93-4eac-b154-b802f5d3377d",
-						"text": {
-							"caption": "负责: all",
-							"font": {
-								"style": "normal",
-								"weight": "normal",
-								"decoration": "none",
-								"size": 18,
-								"color": "#000"
-							}
-						},
-						"offset": {
-							"x": -191,
-							"y": 131
-						},
-						"foldChildren": false,
-						"branchColor": "#a47293",
-						"children": []
-					}]
-				}]
-			}, {
-				"id": "05876694-c17f-4205-87ff-50b6c2e9f391",
-				"parentId": "653607fb-cea7-450f-b7b9-c04cade3eb6c",
-				"text": {
-					"caption": "Problems",
-					"font": {
-						"style": "normal",
-						"weight": "normal",
-						"decoration": "none",
-						"size": 18,
-						"color": "#000"
-					}
-				},
-				"offset": {
-					"x": 129,
-					"y": -160
-				},
-				"foldChildren": false,
-				"branchColor": "#d201df",
-				"children": [{
-					"id": "7fd7dc50-b053-4ae0-b0cf-d8dc5289ebf6",
-					"parentId": "05876694-c17f-4205-87ff-50b6c2e9f391",
-					"text": {
-						"caption": "制作幻灯片",
-						"font": {
-							"style": "normal",
-							"weight": "normal",
-							"decoration": "none",
-							"size": 18,
-							"color": "#000"
-						}
-					},
-					"offset": {
-						"x": 164.61669921875,
-						"y": -42
-					},
-					"foldChildren": false,
-					"branchColor": "#d201df",
-					"children": [{
-						"id": "90ac82b5-e73c-4172-9275-9e0bded58d3a",
-						"parentId": "7fd7dc50-b053-4ae0-b0cf-d8dc5289ebf6",
-						"text": {
-							"caption": "散淡式",
-							"font": {
-								"style": "normal",
-								"weight": "normal",
-								"decoration": "none",
-								"size": 18,
-								"color": "#000"
-							}
-						},
-						"offset": {
-							"x": 157.97246053349227,
-							"y": -5
-						},
-						"foldChildren": false,
-						"branchColor": "#d201df",
-						"children": []
-					}, {
-						"id": "e7f1e849-1f70-4541-ac04-b283a24794b7",
-						"parentId": "7fd7dc50-b053-4ae0-b0cf-d8dc5289ebf6",
-						"text": {
-							"caption": "思维导图辅助",
-							"font": {
-								"style": "normal",
-								"weight": "normal",
-								"decoration": "none",
-								"size": 18,
-								"color": "#000"
-							}
-						},
-						"offset": {
-							"x": 148.9166259765625,
-							"y": 44
-						},
-						"foldChildren": false,
-						"branchColor": "#d201df",
-						"children": []
-					}]
-				}, {
-					"id": "d282c33b-98be-453e-8006-a75e99941839",
-					"parentId": "05876694-c17f-4205-87ff-50b6c2e9f391",
-					"text": {
-						"caption": "听众交互",
-						"font": {
-							"style": "normal",
-							"weight": "normal",
-							"decoration": "none",
-							"size": 18,
-							"color": "#000"
-						}
-					},
-					"offset": {
-						"x": 153.81634703371674,
-						"y": 119
-					},
-					"foldChildren": false,
-					"branchColor": "#d201df",
-					"children": [{
-						"id": "085f53ae-5574-40cf-8b76-f011f4157228",
-						"parentId": "d282c33b-98be-453e-8006-a75e99941839",
-						"text": {
-							"caption": "全景构思",
-							"font": {
-								"style": "normal",
-								"weight": "normal",
-								"decoration": "none",
-								"size": 18,
-								"color": "#000"
-							}
-						},
-						"offset": {
-							"x": 173.61669921875,
-							"y": 42
-						},
-						"foldChildren": false,
-						"branchColor": "#d201df",
-						"children": []
-					}, {
-						"id": "54283dbe-18eb-4fcc-9e0c-6186f147458e",
-						"parentId": "d282c33b-98be-453e-8006-a75e99941839",
-						"text": {
-							"caption": "信息手机互动",
-							"font": {
-								"style": "normal",
-								"weight": "normal",
-								"decoration": "none",
-								"size": 18,
-								"color": "#000"
-							}
-						},
-						"offset": {
-							"x": 137.11669921875,
-							"y": -26
-						},
-						"foldChildren": false,
-						"branchColor": "#d201df",
-						"children": []
-					}]
-				}]
-			}, {
-				"id": "6352d903-9565-4a09-9d00-f902eee443a2",
-				"parentId": "653607fb-cea7-450f-b7b9-c04cade3eb6c",
-				"text": {
-					"caption": "现有工具",
-					"font": {
-						"style": "normal",
-						"weight": "normal",
-						"decoration": "none",
-						"size": 18,
-						"color": "#000"
-					}
-				},
-				"offset": {
-					"x": 143,
-					"y": 75
-				},
-				"foldChildren": false,
-				"branchColor": "#24a754",
-				"children": [{
-					"id": "8b25d4f3-d680-49d0-86ca-39680efdc6b0",
-					"parentId": "6352d903-9565-4a09-9d00-f902eee443a2",
-					"text": {
-						"caption": "PowerPoint",
-						"font": {
-							"style": "normal",
-							"weight": "normal",
-							"decoration": "none",
-							"size": 18,
-							"color": "#000"
-						}
-					},
-					"offset": {
-						"x": 146,
-						"y": -20
-					},
-					"foldChildren": false,
-					"branchColor": "#24a754",
-					"children": [{
-						"id": "dc806227-52d7-4b35-8223-f446b0d6c254",
-						"parentId": "8b25d4f3-d680-49d0-86ca-39680efdc6b0",
-						"text": {
-							"caption": "传统构建",
-							"font": {
-								"style": "normal",
-								"weight": "normal",
-								"decoration": "none",
-								"size": 18,
-								"color": "#000"
-							}
-						},
-						"offset": {
-							"x": 155.83463539136574,
-							"y": -4
-						},
-						"foldChildren": false,
-						"branchColor": "#24a754",
-						"children": []
-					}, {
-						"id": "bff7598d-e727-4b63-9c62-dda95742bb1d",
-						"parentId": "8b25d4f3-d680-49d0-86ca-39680efdc6b0",
-						"text": {
-							"caption": "功能完善",
-							"font": {
-								"style": "normal",
-								"weight": "normal",
-								"decoration": "none",
-								"size": 18,
-								"color": "#000"
-							}
-						},
-						"offset": {
-							"x": 160.2166748046875,
-							"y": 44
-						},
-						"foldChildren": false,
-						"branchColor": "#24a754",
-						"children": []
-					}, {
-						"id": "b3849f19-7465-4fc3-8ae1-f2290d1b799d",
-						"parentId": "8b25d4f3-d680-49d0-86ca-39680efdc6b0",
-						"text": {
-							"caption": "互动偏弱",
-							"font": {
-								"style": "normal",
-								"weight": "normal",
-								"decoration": "none",
-								"size": 18,
-								"color": "#000"
-							}
-						},
-						"offset": {
-							"x": 160.066650390625,
-							"y": 77
-						},
-						"foldChildren": false,
-						"branchColor": "#24a754",
-						"children": []
-					}]
-				}, {
-					"id": "f840cb95-830d-4402-9561-51d623c18bc7",
-					"parentId": "6352d903-9565-4a09-9d00-f902eee443a2",
-					"text": {
-						"caption": "Keynote",
-						"font": {
-							"style": "normal",
-							"weight": "normal",
-							"decoration": "none",
-							"size": 18,
-							"color": "#000"
-						}
-					},
-					"offset": {
-						"x": 142.833251953125,
-						"y": 130
-					},
-					"foldChildren": false,
-					"branchColor": "#24a754",
-					"children": [{
-						"id": "82fc1d04-2448-4d35-a485-dca063e5d3ad",
-						"parentId": "f840cb95-830d-4402-9561-51d623c18bc7",
-						"text": {
-							"caption": "传统构建",
-							"font": {
-								"style": "normal",
-								"weight": "normal",
-								"decoration": "none",
-								"size": 18,
-								"color": "#000"
-							}
-						},
-						"offset": {
-							"x": 155.9987564268522,
-							"y": 2
-						},
-						"foldChildren": false,
-						"branchColor": "#24a754",
-						"children": []
-					}, {
-						"id": "ea2a4ce0-a06a-4a6a-a833-a0b6cad77194",
-						"parentId": "f840cb95-830d-4402-9561-51d623c18bc7",
-						"text": {
-							"caption": "功能优秀",
-							"font": {
-								"style": "normal",
-								"weight": "normal",
-								"decoration": "none",
-								"size": 18,
-								"color": "#000"
-							}
-						},
-						"offset": {
-							"x": 261.050048828125,
-							"y": 14
-						},
-						"foldChildren": false,
-						"branchColor": "#24a754",
-						"children": []
-					}]
-				}, {
-					"id": "5d91b5ef-dc33-4e99-a1f6-1af7506117e4",
-					"parentId": "6352d903-9565-4a09-9d00-f902eee443a2",
-					"text": {
-						"caption": "Prezi",
-						"font": {
-							"style": "normal",
-							"weight": "normal",
-							"decoration": "none",
-							"size": 18,
-							"color": "#000"
-						}
-					},
-					"offset": {
-						"x": 223,
-						"y": 260
-					},
-					"foldChildren": false,
-					"branchColor": "#24a754",
-					"children": [{
-						"id": "d649303d-381e-42ad-bee3-d49ba6d8b69b",
-						"parentId": "5d91b5ef-dc33-4e99-a1f6-1af7506117e4",
-						"text": {
-							"caption": "展示强大新颖",
-							"font": {
-								"style": "normal",
-								"weight": "normal",
-								"decoration": "none",
-								"size": 18,
-								"color": "#000"
-							}
-						},
-						"offset": {
-							"x": 215.566650390625,
-							"y": -58
-						},
-						"foldChildren": false,
-						"branchColor": "#24a754",
-						"children": []
-					}, {
-						"id": "c1854983-0573-4b3d-b5a0-322c2e5fbba5",
-						"parentId": "5d91b5ef-dc33-4e99-a1f6-1af7506117e4",
-						"text": {
-							"caption": "制作复杂",
-							"font": {
-								"style": "normal",
-								"weight": "normal",
-								"decoration": "none",
-								"size": 18,
-								"color": "#000"
-							}
-						},
-						"offset": {
-							"x": 316.716796875,
-							"y": 35
-						},
-						"foldChildren": false,
-						"branchColor": "#24a754",
-						"children": []
-					}]
-				}, {
-					"id": "74a971c3-3dbf-4d56-9676-700ad04aef60",
-					"parentId": "6352d903-9565-4a09-9d00-f902eee443a2",
-					"text": {
-						"caption": "SlideIdea",
-						"font": {
-							"style": "normal",
-							"weight": "normal",
-							"decoration": "none",
-							"size": 18,
-							"color": "#000"
-						}
-					},
-					"offset": {
-						"x": 216.88330078125,
-						"y": 357
-					},
-					"foldChildren": false,
-					"branchColor": "#24a754",
-					"children": [{
-						"id": "fc5ac13b-f11c-4b74-a2d8-ec85bd586c7c",
-						"parentId": "74a971c3-3dbf-4d56-9676-700ad04aef60",
-						"text": {
-							"caption": "传统构建",
-							"font": {
-								"style": "normal",
-								"weight": "normal",
-								"decoration": "none",
-								"size": 18,
-								"color": "#000"
-							}
-						},
-						"offset": {
-							"x": 145.066650390625,
-							"y": -20
-						},
-						"foldChildren": false,
-						"branchColor": "#24a754",
-						"children": []
-					}, {
-						"id": "2837e2be-3019-435f-9e15-7e865fd977dc",
-						"parentId": "74a971c3-3dbf-4d56-9676-700ad04aef60",
-						"text": {
-							"caption": "提供交互",
-							"font": {
-								"style": "normal",
-								"weight": "normal",
-								"decoration": "none",
-								"size": 18,
-								"color": "#000"
-							}
-						},
-						"offset": {
-							"x": 136.183349609375,
-							"y": 26
-						},
-						"foldChildren": false,
-						"branchColor": "#24a754",
-						"children": []
-					}, {
-						"id": "56555237-6148-484c-978e-7854d3079480",
-						"parentId": "74a971c3-3dbf-4d56-9676-700ad04aef60",
-						"text": {
-							"caption": "使用屏障",
-							"font": {
-								"style": "normal",
-								"weight": "normal",
-								"decoration": "none",
-								"size": 18,
-								"color": "#000"
-							}
-						},
-						"offset": {
-							"x": 139.5,
-							"y": 85
-						},
-						"foldChildren": false,
-						"branchColor": "#24a754",
-						"children": []
-					}]
-				}]
-			}, {
-				"id": "3214a0f9-1c92-4d9b-8c9c-c1a06bc03fab",
-				"parentId": "653607fb-cea7-450f-b7b9-c04cade3eb6c",
-				"text": {
-					"caption": "优势&方案",
-					"font": {
-						"style": "normal",
-						"weight": "normal",
-						"decoration": "none",
-						"size": 18,
-						"color": "#000"
-					}
-				},
-				"offset": {
-					"x": -287,
-					"y": 150
-				},
-				"foldChildren": false,
-				"branchColor": "#171f0e",
-				"children": [{
-					"id": "dd1b828e-4945-4623-b864-fec900e2a854",
-					"parentId": "3214a0f9-1c92-4d9b-8c9c-c1a06bc03fab",
-					"text": {
-						"caption": "MindMap",
-						"font": {
-							"style": "normal",
-							"weight": "normal",
-							"decoration": "none",
-							"size": 18,
-							"color": "#000"
-						}
-					},
-					"offset": {
-						"x": -127.61669921875,
-						"y": -113
-					},
-					"foldChildren": false,
-					"branchColor": "#171f0e",
-					"children": [{
-						"id": "541db4b8-9dce-46aa-b4a8-f841dcb6fb8e",
-						"parentId": "dd1b828e-4945-4623-b864-fec900e2a854",
-						"text": {
-							"caption": "辅助思维工具",
-							"font": {
-								"style": "normal",
-								"weight": "normal",
-								"decoration": "none",
-								"size": 18,
-								"color": "#000"
-							}
-						},
-						"offset": {
-							"x": -158.2332763671875,
-							"y": -17
-						},
-						"foldChildren": false,
-						"branchColor": "#171f0e",
-						"children": []
-					}, {
-						"id": "077f9501-7b98-4f2b-86c0-3f861bf0cd3e",
-						"parentId": "dd1b828e-4945-4623-b864-fec900e2a854",
-						"text": {
-							"caption": "良好的组织形态",
-							"font": {
-								"style": "normal",
-								"weight": "normal",
-								"decoration": "none",
-								"size": 18,
-								"color": "#000"
-							}
-						},
-						"offset": {
-							"x": -163.96661376953125,
-							"y": 40
-						},
-						"foldChildren": false,
-						"branchColor": "#171f0e",
-						"children": []
-					}]
-				}, {
-					"id": "56bc7235-fb91-457b-8903-984c37cf99d8",
-					"parentId": "3214a0f9-1c92-4d9b-8c9c-c1a06bc03fab",
-					"text": {
-						"caption": "Deck.js",
-						"font": {
-							"style": "normal",
-							"weight": "normal",
-							"decoration": "none",
-							"size": 18,
-							"color": "#000"
-						}
-					},
-					"offset": {
-						"x": -142.183349609375,
-						"y": 22
-					},
-					"foldChildren": false,
-					"branchColor": "#171f0e",
-					"children": [{
-						"id": "f899c090-3523-4a84-b06d-4ede9350d70e",
-						"parentId": "56bc7235-fb91-457b-8903-984c37cf99d8",
-						"text": {
-							"caption": "表现形态简易",
-							"font": {
-								"style": "normal",
-								"weight": "normal",
-								"decoration": "none",
-								"size": 18,
-								"color": "#000"
-							}
-						},
-						"offset": {
-							"x": -154.1629636194557,
-							"y": -2
-						},
-						"foldChildren": false,
-						"branchColor": "#171f0e",
-						"children": []
-					}, {
-						"id": "03972b92-35d8-46ce-8839-49fa0604c845",
-						"parentId": "56bc7235-fb91-457b-8903-984c37cf99d8",
-						"text": {
-							"caption": "打开速度快",
-							"font": {
-								"style": "normal",
-								"weight": "normal",
-								"decoration": "none",
-								"size": 18,
-								"color": "#000"
-							}
-						},
-						"offset": {
-							"x": -159.949951171875,
-							"y": -51
-						},
-						"foldChildren": false,
-						"branchColor": "#171f0e",
-						"children": []
-					}]
-				}, {
-					"id": "f665acc7-892e-4b0d-b5cb-6c5b42341e1a",
-					"parentId": "3214a0f9-1c92-4d9b-8c9c-c1a06bc03fab",
-					"text": {
-						"caption": "HTML5",
-						"font": {
-							"style": "normal",
-							"weight": "normal",
-							"decoration": "none",
-							"size": 18,
-							"color": "#000"
-						}
-					},
-					"offset": {
-						"x": -162.0999755859375,
-						"y": 85
-					},
-					"foldChildren": false,
-					"branchColor": "#171f0e",
-					"children": [{
-						"id": "9a7c1346-009c-4afd-a375-cf6cac30b0d9",
-						"parentId": "f665acc7-892e-4b0d-b5cb-6c5b42341e1a",
-						"text": {
-							"caption": "跨平台",
-							"font": {
-								"style": "normal",
-								"weight": "normal",
-								"decoration": "none",
-								"size": 18,
-								"color": "#000"
-							}
-						},
-						"offset": {
-							"x": -148.93341064453125,
-							"y": -9
-						},
-						"foldChildren": false,
-						"branchColor": "#171f0e",
-						"children": []
-					}, {
-						"id": "57257908-c3d5-4311-b72f-1b04c89bc901",
-						"parentId": "f665acc7-892e-4b0d-b5cb-6c5b42341e1a",
-						"text": {
-							"caption": "易于扩展",
-							"font": {
-								"style": "normal",
-								"weight": "normal",
-								"decoration": "none",
-								"size": 18,
-								"color": "#000"
-							}
-						},
-						"offset": {
-							"x": -159.4833984375,
-							"y": 43
-						},
-						"foldChildren": false,
-						"branchColor": "#171f0e",
-						"children": []
-					}, {
-						"id": "01b6c997-570f-4960-8d6b-b648e61d9410",
-						"parentId": "f665acc7-892e-4b0d-b5cb-6c5b42341e1a",
-						"text": {
-							"caption": "方便互动",
-							"font": {
-								"style": "normal",
-								"weight": "normal",
-								"decoration": "none",
-								"size": 18,
-								"color": "#000"
-							}
-						},
-						"offset": {
-							"x": -157.6334228515625,
-							"y": 81
-						},
-						"foldChildren": false,
-						"branchColor": "#171f0e",
-						"children": []
-					}]
-				}]
-			}, {
-				"id": "33aaa19d-9384-43c9-94c3-b4029322e3f8",
-				"parentId": "653607fb-cea7-450f-b7b9-c04cade3eb6c",
-				"text": {
-					"caption": "选择喜欢我们产品的程度:select",
-					"font": {
-						"style": "normal",
-						"weight": "normal",
-						"decoration": "none",
-						"size": 18,
-						"color": "#000"
-					}
-				},
-				"offset": {
-					"x": -268,
-					"y": 496
-				},
-				"foldChildren": false,
-				"branchColor": "#e8704b",
-				"children": [{
-					"id": "bf3aad7e-55ba-447f-830c-87eb383198ba",
-					"parentId": "33aaa19d-9384-43c9-94c3-b4029322e3f8",
-					"text": {
-						"caption": "非常喜欢",
-						"font": {
-							"style": "normal",
-							"weight": "normal",
-							"decoration": "none",
-							"size": 18,
-							"color": "#000"
-						}
-					},
-					"offset": {
-						"x": -391.7333984375,
-						"y": 0
-					},
-					"foldChildren": false,
-					"branchColor": "#e8704b",
-					"children": [],
-					"voteCount": 0
-				}, {
-					"id": "d0827337-070a-4a57-9f1e-fb3c1b26d1cb",
-					"parentId": "33aaa19d-9384-43c9-94c3-b4029322e3f8",
-					"text": {
-						"caption": "ORZ",
-						"font": {
-							"style": "normal",
-							"weight": "normal",
-							"decoration": "none",
-							"size": 18,
-							"color": "#000"
-						}
-					},
-					"offset": {
-						"x": -301.7333984375,
-						"y": 72
-					},
-					"foldChildren": false,
-					"branchColor": "#e8704b",
-					"children": [],
-					"voteCount": 0
-				}, {
-					"id": "b68c3fd1-e668-41f2-bebd-a19b8841a2cb",
-					"parentId": "33aaa19d-9384-43c9-94c3-b4029322e3f8",
-					"text": {
-						"caption": "超级喜欢",
-						"font": {
-							"style": "normal",
-							"weight": "normal",
-							"decoration": "none",
-							"size": 18,
-							"color": "#000"
-						}
-					},
-					"offset": {
-						"x": -434.4666748046875,
-						"y": -71
-					},
-					"foldChildren": false,
-					"branchColor": "#e8704b",
-					"children": [],
-					"voteCount": 0
-				}, {
-					"id": "7c58df20-714b-4878-826c-e0920c30ee9b",
-					"parentId": "33aaa19d-9384-43c9-94c3-b4029322e3f8",
-					"text": {
-						"caption": "不能更喜欢了",
-						"font": {
-							"style": "normal",
-							"weight": "normal",
-							"decoration": "none",
-							"size": 18,
-							"color": "#000"
-						}
-					},
-					"offset": {
-						"x": -435.550048828125,
-						"y": 135
-					},
-					"foldChildren": false,
-					"branchColor": "#e8704b",
-					"children": [],
-					"voteCount": 0
-				}]
-			}, {
-				"id": "0b9157bf-dc77-46a7-ac10-ddd681a92c1a",
-				"parentId": "653607fb-cea7-450f-b7b9-c04cade3eb6c",
-				"text": {
-					"caption": "统计在场男女比例:radio",
-					"font": {
-						"style": "normal",
-						"weight": "normal",
-						"decoration": "none",
-						"size": 18,
-						"color": "#000"
-					}
-				},
-				"offset": {
-					"x": 62,
-					"y": 516
-				},
-				"foldChildren": false,
-				"branchColor": "#251b8d",
-				"children": [{
-					"id": "8dd73297-09cb-4c22-9794-06e02bf09f7f",
-					"parentId": "0b9157bf-dc77-46a7-ac10-ddd681a92c1a",
-					"text": {
-						"caption": "男生",
-						"font": {
-							"style": "normal",
-							"weight": "normal",
-							"decoration": "none",
-							"size": 18,
-							"color": "#000"
-						}
-					},
-					"offset": {
-						"x": 268.25,
-						"y": 135
-					},
-					"foldChildren": false,
-					"branchColor": "#251b8d",
-					"children": [],
-					"voteCount": 0
-				}, {
-					"id": "6c3aef60-f443-4456-9bfc-6a54482dff80",
-					"parentId": "0b9157bf-dc77-46a7-ac10-ddd681a92c1a",
-					"text": {
-						"caption": "女生",
-						"font": {
-							"style": "normal",
-							"weight": "normal",
-							"decoration": "none",
-							"size": 18,
-							"color": "#000"
-						}
-					},
-					"offset": {
-						"x": 234.8333740234375,
-						"y": -34
-					},
-					"foldChildren": false,
-					"branchColor": "#251b8d",
-					"children": [],
-					"voteCount": 0
-				}]
-			}, {
-				"id": "2f94f81e-f507-404b-9bdf-0cfcfecdd168",
-				"parentId": "653607fb-cea7-450f-b7b9-c04cade3eb6c",
-				"text": {
-					"caption": "谢谢",
-					"font": {
-						"style": "normal",
-						"weight": "normal",
-						"decoration": "none",
-						"size": 18,
-						"color": "#000"
-					}
-				},
-				"offset": {
-					"x": -111.2332763671875,
-					"y": 672.25
-				},
-				"foldChildren": false,
-				"branchColor": "#80c332",
-				"children": [{
-					"id": "8c426746-c7a3-45b5-9d4c-29c5c3112568",
-					"parentId": "2f94f81e-f507-404b-9bdf-0cfcfecdd168",
-					"text": {
-						"caption": "感谢创智天地",
-						"font": {
-							"style": "normal",
-							"weight": "normal",
-							"decoration": "none",
-							"size": 18,
-							"color": "#000"
-						}
-					},
-					"offset": {
-						"x": -158.93271977780387,
-						"y": 3
-					},
-					"foldChildren": false,
-					"branchColor": "#80c332",
-					"children": []
-				}, {
-					"id": "cbb486a3-fa11-4259-8b28-40ff79dd126f",
-					"parentId": "2f94f81e-f507-404b-9bdf-0cfcfecdd168",
-					"text": {
-						"caption": "感谢PMCAMP",
-						"font": {
-							"style": "normal",
-							"weight": "normal",
-							"decoration": "none",
-							"size": 18,
-							"color": "#000"
-						}
-					},
-					"offset": {
-						"x": -179.7999267578125,
-						"y": 70
-					},
-					"foldChildren": false,
-					"branchColor": "#80c332",
-					"children": []
-				}, {
-					"id": "151d56d1-9d6f-41ff-9318-2f985057103e",
-					"parentId": "2f94f81e-f507-404b-9bdf-0cfcfecdd168",
-					"text": {
-						"caption": "感谢Team",
-						"font": {
-							"style": "normal",
-							"weight": "normal",
-							"decoration": "none",
-							"size": 18,
-							"color": "#000"
-						}
-					},
-					"offset": {
-						"x": -142.6500244140625,
-						"y": -67
-					},
-					"foldChildren": false,
-					"branchColor": "#80c332",
-					"children": []
-				}]
-			}]
-		}
-	},
-	"dates": {
-		"created": 1352575751098,
-		"modified": 1352606997313
-	},
-	"dimensions": {
-		"x": 3000,
-		"y": 2000
-	},
-	"autosave": false
+  "id": "b3e0ba2f-f252-4067-bb91-7f752d0da772",
+  "title": "银天下移动版",
+  "mindmap": {
+    "root": {
+      "id": "b3cc760d-a737-47f5-ae47-1fb78597bf06",
+      "parentId": null,
+      "text": {
+        "caption": "银天下移动版",
+        "font": {
+          "style": "normal",
+          "weight": "bold",
+          "decoration": "none",
+          "size": 26,
+          "color": "#000"
+        }
+      },
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "foldChildren": false,
+      "branchColor": "#000",
+      "children": [
+        {
+          "id": "1d037c48-5a14-427c-bf09-c7348a344c0e",
+          "parentId": "b3cc760d-a737-47f5-ae47-1fb78597bf06",
+          "text": {
+            "caption": "目标：做一款优秀的贵金属软件",
+            "font": {
+              "style": "normal",
+              "weight": "normal",
+              "decoration": "none",
+              "size": 18,
+              "color": "#000"
+            }
+          },
+          "offset": {
+            "x": 232,
+            "y": -254
+          },
+          "foldChildren": false,
+          "branchColor": "#0d6496",
+          "children": [
+            {
+              "id": "451b0adc-5ffc-4ea1-9f50-e4e4e199b555",
+              "parentId": "1d037c48-5a14-427c-bf09-c7348a344c0e",
+              "text": {
+                "caption": "面向用户类型",
+                "font": {
+                  "style": "normal",
+                  "weight": "normal",
+                  "decoration": "none",
+                  "size": 18,
+                  "color": "#000"
+                }
+              },
+              "offset": {
+                "x": 219,
+                "y": -219
+              },
+              "foldChildren": false,
+              "branchColor": "#0d6496",
+              "children": [
+                {
+                  "id": "9cea255b-948d-4b8c-85c1-323b3050fad5",
+                  "parentId": "451b0adc-5ffc-4ea1-9f50-e4e4e199b555",
+                  "text": {
+                    "caption": "引导小白进入到我们的服务体系当中",
+                    "font": {
+                      "style": "normal",
+                      "weight": "normal",
+                      "decoration": "none",
+                      "size": 18,
+                      "color": "#000"
+                    }
+                  },
+                  "offset": {
+                    "x": 164,
+                    "y": -79
+                  },
+                  "foldChildren": false,
+                  "branchColor": "#0d6496",
+                  "children": []
+                },
+                {
+                  "id": "243bab4b-3875-472b-8c69-6c572746b672",
+                  "parentId": "451b0adc-5ffc-4ea1-9f50-e4e4e199b555",
+                  "text": {
+                    "caption": "满足现有用户",
+                    "font": {
+                      "style": "normal",
+                      "weight": "normal",
+                      "decoration": "none",
+                      "size": 18,
+                      "color": "#000"
+                    }
+                  },
+                  "offset": {
+                    "x": 200,
+                    "y": -10
+                  },
+                  "foldChildren": false,
+                  "branchColor": "#0d6496",
+                  "children": []
+                },
+                {
+                  "id": "cccc1d18-f2e3-4fb5-b08a-7a43124d8900",
+                  "parentId": "451b0adc-5ffc-4ea1-9f50-e4e4e199b555",
+                  "text": {
+                    "caption": "将贵金属领域的其他用户导入我们的服务体系",
+                    "font": {
+                      "style": "normal",
+                      "weight": "normal",
+                      "decoration": "none",
+                      "size": 18,
+                      "color": "#000"
+                    }
+                  },
+                  "offset": {
+                    "x": 192,
+                    "y": 43
+                  },
+                  "foldChildren": false,
+                  "branchColor": "#0d6496",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "e58e997c-445e-47f6-9fa3-23faef06d277",
+              "parentId": "1d037c48-5a14-427c-bf09-c7348a344c0e",
+              "text": {
+                "caption": "市场认可",
+                "font": {
+                  "style": "normal",
+                  "weight": "normal",
+                  "decoration": "none",
+                  "size": 18,
+                  "color": "#000"
+                }
+              },
+              "offset": {
+                "x": 260,
+                "y": -27
+              },
+              "foldChildren": false,
+              "branchColor": "#0d6496",
+              "children": [
+                {
+                  "id": "8173ce40-4133-4bea-8325-bfd34d6d3cc2",
+                  "parentId": "e58e997c-445e-47f6-9fa3-23faef06d277",
+                  "text": {
+                    "caption": "活跃度",
+                    "font": {
+                      "style": "normal",
+                      "weight": "normal",
+                      "decoration": "none",
+                      "size": 18,
+                      "color": "#000"
+                    }
+                  },
+                  "offset": {
+                    "x": 174,
+                    "y": -31
+                  },
+                  "foldChildren": false,
+                  "branchColor": "#0d6496",
+                  "children": [
+                    {
+                      "id": "3e8a9e59-3001-40d6-9359-8ce16a0b4d3f",
+                      "parentId": "8173ce40-4133-4bea-8325-bfd34d6d3cc2",
+                      "text": {
+                        "caption": "使用频率",
+                        "font": {
+                          "style": "normal",
+                          "weight": "normal",
+                          "decoration": "none",
+                          "size": 18,
+                          "color": "#000"
+                        }
+                      },
+                      "offset": {
+                        "x": 102,
+                        "y": -33
+                      },
+                      "foldChildren": false,
+                      "branchColor": "#0d6496",
+                      "children": []
+                    },
+                    {
+                      "id": "4c74205e-54bd-4333-a65d-15f5f19afb75",
+                      "parentId": "8173ce40-4133-4bea-8325-bfd34d6d3cc2",
+                      "text": {
+                        "caption": "创造内容",
+                        "font": {
+                          "style": "normal",
+                          "weight": "normal",
+                          "decoration": "none",
+                          "size": 18,
+                          "color": "#000"
+                        }
+                      },
+                      "offset": {
+                        "x": 126,
+                        "y": 36
+                      },
+                      "foldChildren": false,
+                      "branchColor": "#0d6496",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "067d4944-5269-480d-85a0-f593c62ffed4",
+                  "parentId": "e58e997c-445e-47f6-9fa3-23faef06d277",
+                  "text": {
+                    "caption": "用户量",
+                    "font": {
+                      "style": "normal",
+                      "weight": "normal",
+                      "decoration": "none",
+                      "size": 18,
+                      "color": "#000"
+                    }
+                  },
+                  "offset": {
+                    "x": 163,
+                    "y": 42
+                  },
+                  "foldChildren": false,
+                  "branchColor": "#0d6496",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "f168ef9c-457b-4279-9152-31a28bb4fa1a",
+              "parentId": "1d037c48-5a14-427c-bf09-c7348a344c0e",
+              "text": {
+                "caption": "建立开放性贵金属投资社区",
+                "font": {
+                  "style": "normal",
+                  "weight": "normal",
+                  "decoration": "none",
+                  "size": 18,
+                  "color": "#000"
+                }
+              },
+              "offset": {
+                "x": 374,
+                "y": 64
+              },
+              "foldChildren": false,
+              "branchColor": "#0d6496",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "7c1bef81-8bbd-4b73-948b-05a09f10cd40",
+          "parentId": "b3cc760d-a737-47f5-ae47-1fb78597bf06",
+          "text": {
+            "caption": "产品逻辑结构变更",
+            "font": {
+              "style": "normal",
+              "weight": "normal",
+              "decoration": "none",
+              "size": 18,
+              "color": "#000"
+            }
+          },
+          "offset": {
+            "x": 213,
+            "y": 102
+          },
+          "foldChildren": false,
+          "branchColor": "#8e5034",
+          "children": [
+            {
+              "id": "95f2a75f-49f7-4e45-b041-9a0565bc480d",
+              "parentId": "7c1bef81-8bbd-4b73-948b-05a09f10cd40",
+              "text": {
+                "caption": "以品种为核心的用户入口",
+                "font": {
+                  "style": "normal",
+                  "weight": "normal",
+                  "decoration": "none",
+                  "size": 18,
+                  "color": "#000"
+                }
+              },
+              "offset": {
+                "x": 218,
+                "y": -103
+              },
+              "foldChildren": false,
+              "branchColor": "#8e5034",
+              "children": []
+            },
+            {
+              "id": "0c5df209-5e44-499b-85fa-1fa079eca936",
+              "parentId": "7c1bef81-8bbd-4b73-948b-05a09f10cd40",
+              "text": {
+                "caption": "行情为内容的主要载体",
+                "font": {
+                  "style": "normal",
+                  "weight": "normal",
+                  "decoration": "none",
+                  "size": 18,
+                  "color": "#000"
+                }
+              },
+              "offset": {
+                "x": 215,
+                "y": -10
+              },
+              "foldChildren": false,
+              "branchColor": "#8e5034",
+              "children": [
+                {
+                  "id": "9c66818b-0acb-41d7-9329-cfd83f3ebba0",
+                  "parentId": "0c5df209-5e44-499b-85fa-1fa079eca936",
+                  "text": {
+                    "caption": "分时，k线",
+                    "font": {
+                      "style": "normal",
+                      "weight": "normal",
+                      "decoration": "none",
+                      "size": 18,
+                      "color": "#000"
+                    }
+                  },
+                  "offset": {
+                    "x": 236,
+                    "y": -69
+                  },
+                  "foldChildren": false,
+                  "branchColor": "#8e5034",
+                  "children": []
+                },
+                {
+                  "id": "0daec9ce-aa16-4740-9cfa-c99ceb447ca1",
+                  "parentId": "0c5df209-5e44-499b-85fa-1fa079eca936",
+                  "text": {
+                    "caption": "关键时间点信息",
+                    "font": {
+                      "style": "normal",
+                      "weight": "normal",
+                      "decoration": "none",
+                      "size": 18,
+                      "color": "#000"
+                    }
+                  },
+                  "offset": {
+                    "x": 236,
+                    "y": -23
+                  },
+                  "foldChildren": false,
+                  "branchColor": "#8e5034",
+                  "children": []
+                },
+                {
+                  "id": "4983159e-5d12-49ae-af6c-836bbcfed99f",
+                  "parentId": "0c5df209-5e44-499b-85fa-1fa079eca936",
+                  "text": {
+                    "caption": "专家喊单信息",
+                    "font": {
+                      "style": "normal",
+                      "weight": "normal",
+                      "decoration": "none",
+                      "size": 18,
+                      "color": "#000"
+                    }
+                  },
+                  "offset": {
+                    "x": 236,
+                    "y": 24
+                  },
+                  "foldChildren": false,
+                  "branchColor": "#8e5034",
+                  "children": []
+                },
+                {
+                  "id": "46594517-9a99-45c0-a0ed-e41d5985a04d",
+                  "parentId": "0c5df209-5e44-499b-85fa-1fa079eca936",
+                  "text": {
+                    "caption": "行情预警线",
+                    "font": {
+                      "style": "normal",
+                      "weight": "normal",
+                      "decoration": "none",
+                      "size": 18,
+                      "color": "#000"
+                    }
+                  },
+                  "offset": {
+                    "x": 241,
+                    "y": 65
+                  },
+                  "foldChildren": false,
+                  "branchColor": "#8e5034",
+                  "children": []
+                },
+                {
+                  "id": "8bd117e1-6ac3-4fbd-9fe1-91fb01139b37",
+                  "parentId": "0c5df209-5e44-499b-85fa-1fa079eca936",
+                  "text": {
+                    "caption": "持仓观察点",
+                    "font": {
+                      "style": "normal",
+                      "weight": "normal",
+                      "decoration": "none",
+                      "size": 18,
+                      "color": "#000"
+                    }
+                  },
+                  "offset": {
+                    "x": 251,
+                    "y": 109
+                  },
+                  "foldChildren": false,
+                  "branchColor": "#8e5034",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "d65eb80c-d479-45ad-ad4f-e263cf651240",
+              "parentId": "7c1bef81-8bbd-4b73-948b-05a09f10cd40",
+              "text": {
+                "caption": "辅助内容",
+                "font": {
+                  "style": "normal",
+                  "weight": "normal",
+                  "decoration": "none",
+                  "size": 18,
+                  "color": "#000"
+                }
+              },
+              "offset": {
+                "x": 274,
+                "y": 187
+              },
+              "foldChildren": false,
+              "branchColor": "#8e5034",
+              "children": [
+                {
+                  "id": "ae3c5c87-4715-4a84-98a1-01380d2d02bc",
+                  "parentId": "d65eb80c-d479-45ad-ad4f-e263cf651240",
+                  "text": {
+                    "caption": "基础问答",
+                    "font": {
+                      "style": "normal",
+                      "weight": "normal",
+                      "decoration": "none",
+                      "size": 18,
+                      "color": "#000"
+                    }
+                  },
+                  "offset": {
+                    "x": 148,
+                    "y": -32
+                  },
+                  "foldChildren": false,
+                  "branchColor": "#8e5034",
+                  "children": []
+                },
+                {
+                  "id": "5d9f9d49-99f0-43ae-b73a-9ba0eb80e62d",
+                  "parentId": "d65eb80c-d479-45ad-ad4f-e263cf651240",
+                  "text": {
+                    "caption": "新闻",
+                    "font": {
+                      "style": "normal",
+                      "weight": "normal",
+                      "decoration": "none",
+                      "size": 18,
+                      "color": "#000"
+                    }
+                  },
+                  "offset": {
+                    "x": 145,
+                    "y": 12
+                  },
+                  "foldChildren": false,
+                  "branchColor": "#8e5034",
+                  "children": []
+                },
+                {
+                  "id": "b6ab4cc0-20fb-478b-bb37-3e037c52b976",
+                  "parentId": "d65eb80c-d479-45ad-ad4f-e263cf651240",
+                  "text": {
+                    "caption": "互动信息",
+                    "font": {
+                      "style": "normal",
+                      "weight": "normal",
+                      "decoration": "none",
+                      "size": 18,
+                      "color": "#000"
+                    }
+                  },
+                  "offset": {
+                    "x": 155,
+                    "y": 57
+                  },
+                  "foldChildren": false,
+                  "branchColor": "#8e5034",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "bacb8dba-793e-4ec5-b4d6-2758fd59622d",
+              "parentId": "7c1bef81-8bbd-4b73-948b-05a09f10cd40",
+              "text": {
+                "caption": "其他",
+                "font": {
+                  "style": "normal",
+                  "weight": "normal",
+                  "decoration": "none",
+                  "size": 18,
+                  "color": "#000"
+                }
+              },
+              "offset": {
+                "x": 287,
+                "y": 325
+              },
+              "foldChildren": false,
+              "branchColor": "#8e5034",
+              "children": [
+                {
+                  "id": "6f680a53-28a5-42a1-a73f-e878734e89ca",
+                  "parentId": "bacb8dba-793e-4ec5-b4d6-2758fd59622d",
+                  "text": {
+                    "caption": "增加持仓信息",
+                    "font": {
+                      "style": "normal",
+                      "weight": "normal",
+                      "decoration": "none",
+                      "size": 18,
+                      "color": "#000"
+                    }
+                  },
+                  "offset": {
+                    "x": 121,
+                    "y": -3
+                  },
+                  "foldChildren": false,
+                  "branchColor": "#8e5034",
+                  "children": []
+                },
+                {
+                  "id": "c00eab8c-42ac-4a93-a063-a1f28f0e8d53",
+                  "parentId": "bacb8dba-793e-4ec5-b4d6-2758fd59622d",
+                  "text": {
+                    "caption": "快速营收计算",
+                    "font": {
+                      "style": "normal",
+                      "weight": "normal",
+                      "decoration": "none",
+                      "size": 18,
+                      "color": "#000"
+                    }
+                  },
+                  "offset": {
+                    "x": 124,
+                    "y": 56
+                  },
+                  "foldChildren": false,
+                  "branchColor": "#8e5034",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "67ea1723-a41d-4718-981c-6d595bdb914e",
+          "parentId": "b3cc760d-a737-47f5-ae47-1fb78597bf06",
+          "text": {
+            "caption": "移动特有相关特性",
+            "font": {
+              "style": "normal",
+              "weight": "normal",
+              "decoration": "none",
+              "size": 18,
+              "color": "#000"
+            }
+          },
+          "offset": {
+            "x": 212,
+            "y": 676
+          },
+          "foldChildren": false,
+          "branchColor": "#6c6493",
+          "children": [
+            {
+              "id": "4cea069c-a59c-4113-9cac-fb515350eafc",
+              "parentId": "67ea1723-a41d-4718-981c-6d595bdb914e",
+              "text": {
+                "caption": "行情预警",
+                "font": {
+                  "style": "normal",
+                  "weight": "normal",
+                  "decoration": "none",
+                  "size": 18,
+                  "color": "#000"
+                }
+              },
+              "offset": {
+                "x": 290,
+                "y": -147
+              },
+              "foldChildren": false,
+              "branchColor": "#6c6493",
+              "children": []
+            },
+            {
+              "id": "344eeb1b-d856-4405-a087-7138c4649f4c",
+              "parentId": "67ea1723-a41d-4718-981c-6d595bdb914e",
+              "text": {
+                "caption": "单据成交推送",
+                "font": {
+                  "style": "normal",
+                  "weight": "normal",
+                  "decoration": "none",
+                  "size": 18,
+                  "color": "#000"
+                }
+              },
+              "offset": {
+                "x": 269,
+                "y": -89
+              },
+              "foldChildren": false,
+              "branchColor": "#6c6493",
+              "children": []
+            },
+            {
+              "id": "c3bc178f-f8f8-4521-b87a-bfaa30b892dc",
+              "parentId": "67ea1723-a41d-4718-981c-6d595bdb914e",
+              "text": {
+                "caption": "喊单提醒",
+                "font": {
+                  "style": "normal",
+                  "weight": "normal",
+                  "decoration": "none",
+                  "size": 18,
+                  "color": "#000"
+                }
+              },
+              "offset": {
+                "x": 270,
+                "y": -32
+              },
+              "foldChildren": false,
+              "branchColor": "#6c6493",
+              "children": []
+            },
+            {
+              "id": "87c3ede7-42fa-465d-bb5e-28bccb4526c8",
+              "parentId": "67ea1723-a41d-4718-981c-6d595bdb914e",
+              "text": {
+                "caption": "消息推送",
+                "font": {
+                  "style": "normal",
+                  "weight": "normal",
+                  "decoration": "none",
+                  "size": 18,
+                  "color": "#000"
+                }
+              },
+              "offset": {
+                "x": 270,
+                "y": 18
+              },
+              "foldChildren": false,
+              "branchColor": "#6c6493",
+              "children": []
+            },
+            {
+              "id": "8adb8f3f-1d51-4024-ab41-b7f40ee43e3e",
+              "parentId": "67ea1723-a41d-4718-981c-6d595bdb914e",
+              "text": {
+                "caption": "即时问答",
+                "font": {
+                  "style": "normal",
+                  "weight": "normal",
+                  "decoration": "none",
+                  "size": 18,
+                  "color": "#000"
+                }
+              },
+              "offset": {
+                "x": 281,
+                "y": 72
+              },
+              "foldChildren": false,
+              "branchColor": "#6c6493",
+              "children": []
+            },
+            {
+              "id": "d46fb975-31f2-4070-9a03-7f372353dadf",
+              "parentId": "67ea1723-a41d-4718-981c-6d595bdb914e",
+              "text": {
+                "caption": "快速连线",
+                "font": {
+                  "style": "normal",
+                  "weight": "normal",
+                  "decoration": "none",
+                  "size": 18,
+                  "color": "#000"
+                }
+              },
+              "offset": {
+                "x": 299,
+                "y": 124
+              },
+              "foldChildren": false,
+              "branchColor": "#6c6493",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "d8626860-3bda-4d48-b04e-f329785eadea",
+          "parentId": "b3cc760d-a737-47f5-ae47-1fb78597bf06",
+          "text": {
+            "caption": "社交易用性",
+            "font": {
+              "style": "normal",
+              "weight": "normal",
+              "decoration": "none",
+              "size": 18,
+              "color": "#000"
+            }
+          },
+          "offset": {
+            "x": -281,
+            "y": -95
+          },
+          "foldChildren": false,
+          "branchColor": "#af2a14",
+          "children": [
+            {
+              "id": "7a8ddd01-2fb0-4638-a078-95f8a09239c5",
+              "parentId": "d8626860-3bda-4d48-b04e-f329785eadea",
+              "text": {
+                "caption": "单一信息流",
+                "font": {
+                  "style": "normal",
+                  "weight": "normal",
+                  "decoration": "none",
+                  "size": 18,
+                  "color": "#000"
+                }
+              },
+              "offset": {
+                "x": -193,
+                "y": -93
+              },
+              "foldChildren": false,
+              "branchColor": "#af2a14",
+              "children": []
+            },
+            {
+              "id": "d42a5601-a999-4767-857c-100415d64c1a",
+              "parentId": "d8626860-3bda-4d48-b04e-f329785eadea",
+              "text": {
+                "caption": "个人收件箱",
+                "font": {
+                  "style": "normal",
+                  "weight": "normal",
+                  "decoration": "none",
+                  "size": 18,
+                  "color": "#000"
+                }
+              },
+              "offset": {
+                "x": -187,
+                "y": -19
+              },
+              "foldChildren": false,
+              "branchColor": "#af2a14",
+              "children": [
+                {
+                  "id": "303887c0-5bd5-4d2e-bbdd-c69ebeca6adc",
+                  "parentId": "d42a5601-a999-4767-857c-100415d64c1a",
+                  "text": {
+                    "caption": "之前的提醒推送",
+                    "font": {
+                      "style": "normal",
+                      "weight": "normal",
+                      "decoration": "none",
+                      "size": 18,
+                      "color": "#000"
+                    }
+                  },
+                  "offset": {
+                    "x": -148,
+                    "y": -34
+                  },
+                  "foldChildren": false,
+                  "branchColor": "#af2a14",
+                  "children": []
+                },
+                {
+                  "id": "00dceafe-849a-41ca-adef-8e40961e0cac",
+                  "parentId": "d42a5601-a999-4767-857c-100415d64c1a",
+                  "text": {
+                    "caption": "回复聊天推送",
+                    "font": {
+                      "style": "normal",
+                      "weight": "normal",
+                      "decoration": "none",
+                      "size": 18,
+                      "color": "#000"
+                    }
+                  },
+                  "offset": {
+                    "x": -142,
+                    "y": 20
+                  },
+                  "foldChildren": false,
+                  "branchColor": "#af2a14",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "33e4175c-788a-469c-8b0e-1b5b8ab78938",
+              "parentId": "d8626860-3bda-4d48-b04e-f329785eadea",
+              "text": {
+                "caption": "社交媒体集成",
+                "font": {
+                  "style": "normal",
+                  "weight": "normal",
+                  "decoration": "none",
+                  "size": 18,
+                  "color": "#000"
+                }
+              },
+              "offset": {
+                "x": -207,
+                "y": 55
+              },
+              "foldChildren": false,
+              "branchColor": "#af2a14",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "f017552a-37c7-4152-8c53-e37faa59edd4",
+          "parentId": "b3cc760d-a737-47f5-ae47-1fb78597bf06",
+          "text": {
+            "caption": "软件改进与个性化用户定制",
+            "font": {
+              "style": "normal",
+              "weight": "normal",
+              "decoration": "none",
+              "size": 18,
+              "color": "#000"
+            }
+          },
+          "offset": {
+            "x": -272,
+            "y": 143
+          },
+          "foldChildren": false,
+          "branchColor": "#1dcc57",
+          "children": [
+            {
+              "id": "55a9ed08-8bc6-4ab1-9c9d-7fe446f9ea53",
+              "parentId": "f017552a-37c7-4152-8c53-e37faa59edd4",
+              "text": {
+                "caption": "通过分析用户行为改进软件行为",
+                "font": {
+                  "style": "normal",
+                  "weight": "normal",
+                  "decoration": "none",
+                  "size": 18,
+                  "color": "#000"
+                }
+              },
+              "offset": {
+                "x": -245,
+                "y": -30
+              },
+              "foldChildren": false,
+              "branchColor": "#1dcc57",
+              "children": []
+            },
+            {
+              "id": "224e2c5c-87cd-48f9-bd5d-e1df12f4834c",
+              "parentId": "f017552a-37c7-4152-8c53-e37faa59edd4",
+              "text": {
+                "caption": "通过用户类别改变软件行为",
+                "font": {
+                  "style": "normal",
+                  "weight": "normal",
+                  "decoration": "none",
+                  "size": 18,
+                  "color": "#000"
+                }
+              },
+              "offset": {
+                "x": -276,
+                "y": 66
+              },
+              "foldChildren": false,
+              "branchColor": "#1dcc57",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "dates": {
+    "created": 1368697384500,
+    "modified": 1368700529916
+  },
+  "dimensions": {
+    "x": 3000,
+    "y": 2000
+  },
+  "autosave": false
 }
