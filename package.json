@@ -1,9 +1,11 @@
 {
   "name": "xslide",
-  "main":"./server.js",
+  "main": "./server.js",
   "version": "0.0.1",
   "dependencies": {
-    "connect":"",
-    "socket.io":""
+    "body-parser": "^1.18.3",
+    "connect": "",
+    "serve-static": "^1.13.2",
+    "socket.io": ""
   }
 }

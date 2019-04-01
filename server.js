@@ -73,6 +73,10 @@ var connect = require('connect');
 var io;
 var mindmap;
 
+
+var bodyParser = require('body-parser');
+var serveStatic = require('serve-static')
+
 var server = connect()
 
 .use(function (req, res, next) {
@@ -81,12 +85,9 @@ var server = connect()
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
   return next();
 })
+.use(bodyParser.urlencoded({extended: false}))
+.use('/', serveStatic(__dirname + '/', {'index': ['index.html', 'index.htm']}))
 
-.use(connect.query())
-
-.use(connect.bodyParser())
-
-.use('/', connect.static(__dirname + '/'))
 
 /**
  * Handles the short URL for voting: Redirects to the original URL, with appropriate parameters
@@ -167,7 +168,7 @@ var server = connect()
   res.end( JSON.stringify(tucaoList));
 })
 
-.listen(80);
+.listen(8080);
 
 io = require('socket.io').listen(server);
 
